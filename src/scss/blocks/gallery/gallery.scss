@@ -1,0 +1,106 @@
+.gallery {
+	padding: 120px 0;
+	background-color: var(--bg-light);
+
+	&__section {
+		margin-bottom: 80px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__title {
+		margin-bottom: 40px;
+		text-align: center;
+		color: var(--dark);
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+
+		/* Сбрасываем стили Splide, если они применились, но слайдер не активен */
+		width: 100% !important;
+		/* На всякий случай */
+
+		@media (max-width: 820px) {
+			display: flex;
+			/* Для слайдера */
+			gap: 0;
+		}
+
+		@media (max-width: 600px) {
+			// На очень маленьких экранах в слайдере 1 слайд, это ок
+		}
+	}
+
+	&__item {
+		width: 100%;
+		height: auto;
+		min-height: 100%;
+		border-radius: 8px;
+		overflow: hidden;
+		background-color: #fff;
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+		display: flex;
+		flex-direction: column;
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+		&:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+		}
+	}
+
+	&__img {
+		width: 100%;
+		height: 250px;
+		object-fit: cover;
+		display: block;
+		cursor: pointer;
+		/* Указываем, что можно кликнуть для модалки */
+	}
+
+	&__card-content {
+		padding: 20px;
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__slide-title {
+		margin-bottom: 10px;
+		color: var(--dark);
+		font-weight: 600;
+	}
+
+	&__slide-description {
+		font-size: 14px;
+		color: #666;
+		line-height: 1.5;
+	}
+}
+
+/* Стили для Splide (только когда он активен) */
+.splide.is-active {
+	.gallery__list {
+		display: flex;
+	}
+}
+
+/* Принудительно сбрасываем стили трека на десктопе, если Splide что-то оставил */
+@media (min-width: 820px) {
+	.splide:not(.is-initialized) {
+		visibility: visible !important;
+	}
+
+	.splide__track {
+		overflow: visible;
+	}
+
+	.splide__list {
+		display: grid;
+	}
+}

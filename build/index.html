@@ -18,20 +18,21 @@
         <nav class="header__navigation" title="Навигация" aria-label="Навигация по сайту">
             <ul class="header__navigation-list">
                 <li class="header__navigation-item">
-                    <a href="#about" class="header__navigation-link" title="О нас" aria-label="О нас">О&#160;нас</a>
+                    <a href="/#about" class="header__navigation-link" title="О нас" aria-label="О нас">О&#160;нас</a>
                 </li>
 
                 <li class="header__navigation-item">
-                    <a href="#services" class="header__navigation-link" title="Услуги" aria-label="Услуги">Услуги</a>
+                    <a href="/#services" class="header__navigation-link" title="Услуги" aria-label="Услуги">Услуги</a>
                 </li>
 
                 <li class="header__navigation-item">
-                    <a href="#portfolio" class="header__navigation-link" title="Портфолио" aria-label="Портфолио">Портфолио</a>
+                    <a href="/gallery.html" class="header__navigation-link" title="Портфолио" aria-label="Портфолио">Портфолио</a>
                 </li>
 
                 <li class="header__navigation-item header__logo">
-                    <a href="/#top" class="header__navigation-link" title="Дизайнеры"
-						aria-label="На главную страницу">Дизайнеры</a>
+                    <a href="/#top" class="header__navigation-link" title="Дизайнеры" aria-label="На главную страницу">
+                        <img src="/img/logos/logo.webp" alt="Дизайнеры">
+                    </a>
                 </li>
 
                 <li class="header__navigation-item">
@@ -49,7 +50,9 @@
             </ul>
 
             <div class="header__mobile-logo header__logo mobile-view">
-                <a href="/#top" class="header__navigation-link" title="Дизайнеры" aria-label="На главную страницу">Дизайнеры</a>
+                <a href="/#top" class="header__navigation-link" title="Дизайнеры" aria-label="На главную страницу">
+                    <img src="/img/logos/logo.webp" alt="Дизайнеры">
+                </a>
             </div>
         </nav>
 
@@ -76,7 +79,7 @@
       квадратных метров. Наши интерьеры имеют свой стиль и&#160;почерк.
     </p>
 
-    <a href="" class="main__top-link button btn-d" title="Узнать больше"
+    <a href="/#about" class="main__top-link button btn-d" title="Узнать больше"
       aria-label="Ссылка узнать больше о нашей команде">
       Узнать больше
     </a>
@@ -148,7 +151,7 @@
 
   </div>
 </section>
-        <section class="main__services container">
+        <section class="main__services container" id="services">
   <h2 class="title-m" title="Услуги">Услуги</h2>
   <p class="main__services-description text-m">
     Создаем уникальные интерьеры для загородных домов и&#160;городских квартир от&#160;80&#160;м&#178;.
@@ -156,7 +159,7 @@
 
   <ul class="main__services-list">
     <li class="main__services-item">
-      <img src="/img/mainpage/services_countryside-house.webp" alt="Дизайн загородных домов" class="main__services-item-picture" title="Дизайн загородных домов" />
+      <img src="/img/mainpage/services_countryside-house.webp" alt="Дизайн загородных домов" class="main__services-item-picture js-modal-image" title="Дизайн загородных домов" />
       <div class="main__services-item-info">
         <h3 class="title-s" title="Дизайн загородных домов">Дизайн загородных домов</h3>
         <p>
@@ -166,7 +169,7 @@
     </li>
 
     <li class="main__services-item">
-      <img src="/img/mainpage/services_city-flats.webp" alt="Дизайн городских квартир от 80 кв. м." class="main__services-item-picture" title="Дизайн городских квартир от 80 кв. м." />
+      <img src="/img/mainpage/services_city-flats.webp" alt="Дизайн городских квартир от 80 кв. м." class="main__services-item-picture js-modal-image" title="Дизайн городских квартир от 80 кв. м." />
       <div class="main__services-item-info">
         <h3 class="title-s" title="Дизайн городских квартир от 80 кв. м.">Дизайн городских квартир от&#160;80 кв.&#160;м. </h3>
         <p>
@@ -176,7 +179,7 @@
     </li>
 
     <li class="main__services-item">
-      <img src="/img/mainpage/services_interiors-concept.webp" alt="Разработка концепции интерьера" class="main__services-item-picture" title="Разработка концепции интерьера" />
+      <img src="/img/mainpage/services_interiors-concept.webp" alt="Разработка концепции интерьера" class="main__services-item-picture js-modal-image" title="Разработка концепции интерьера" />
       <div class="main__services-item-info">
         <h3 class="title-s" title="Разработка концепции интерьера">Разработка концепции интерьера</h3>
         <p>
@@ -186,7 +189,7 @@
     </li>
 
     <li class="main__services-item">
-      <img src="/img/mainpage/services_furniture.webp" alt="Подбор мебели и аксессуаров" class="main__services-item-picture" title="Подбор мебели и аксессуаров" />
+      <img src="/img/mainpage/services_furniture.webp" alt="Подбор мебели и аксессуаров" class="main__services-item-picture js-modal-image" title="Подбор мебели и аксессуаров" />
       <div class="main__services-item-info">
         <h3 class="title-s" title="Подбор мебели и аксессуаров">Подбор мебели и&#160;аксессуаров</h3>
         <p>
@@ -259,9 +262,9 @@
       </li>
 
       <li class="main__portfolio-item">
-        <img class="main__portfolio-img" src="/img/mainpage/portfolio_6.webp" alt="Проекты в стиле прованс " />
+        <img class="main__portfolio-img" src="/img/mainpage/portfolio_6.webp" alt="Проекты в стиле прованс" />
         <div class="main__portfolio-item-description">
-          <p class="main__portfolio-accent">Проекты в&#160;стиле прованс </p>
+          <p class="main__portfolio-accent">Проекты в&#160;стиле прованс</p>
           <p class="main__portfolio-name">Романтический интерьер в&#160;стиле прованс</p>
           <p class="main__portfolio-text">
             Примеры интерьеров в&#160;стиле прованс с&#160;использованием натуральных материалов и&#160;светлых тонов.
@@ -332,6 +335,7 @@
                     </p>
                 </li>
             </ul>
+
         </div>
 
         <nav class="footer__navigation" title="Навигация по сайту">
@@ -354,8 +358,33 @@
             </ul>
         </nav>
     </div>
+    <div class="footer__policies">
+        <a href="/privacy-policy.html" class="footer__policy-link">Политика конфиденциальности</a>
+        <a href="/cookie-policy.html" class="footer__policy-link">Политика cookie</a>
+    </div>
     <cite>created by&#160;@romkalis 2026</cite>
 </footer>
+    <div class="image-modal" id="imageModal" aria-hidden="true">
+    <div class="image-modal__overlay" data-close></div>
+    <div class="image-modal__content">
+        <button class="image-modal__close" type="button" title="Закрыть" data-close>&#215;</button>
+        <img src="" alt="" class="image-modal__img">
+    </div>
+</div>
+    <div class="cookie-banner" id="cookieBanner" aria-hidden="true">
+    <div class="container cookie-banner__container">
+        <p class="cookie-banner__text">
+            Мы&#160;используем файлы cookie для улучшения работы сайта. Продолжая пользоваться сайтом, вы&#160;соглашаетесь с&#160;<a href="/cookie-policy.html">Политикой использования cookie</a>.
+        </p>
+        <button class="cookie-banner__btn btn" id="cookieAccept">Принять</button>
+    </div>
+</div>
+
+    <button class="scroll-top" id="scrollTop" type="button" aria-label="Наверх">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 4L4 12L5.41 13.41L11 7.83V20H13V7.83L18.58 13.41L20 12L12 4Z" fill="orange" />
+    </svg>
+</button>
 
     <script src="./js/index.bundle.js" type="module"></script>
 </body>

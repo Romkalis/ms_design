@@ -11,14 +11,14 @@
 @import "./base/text";
 @import "./base/buttons";
 
+// --------------------/* Libraries */--------------------
+
+@import "../../node_modules/@splidejs/splide/dist/css/splide-core.min";
+
 // --------------------/* Blocks */--------------------
 
 @import "./blocks/*.scss";
 @import "./blocks/**/*.scss";
-
-// --------------------/* Libraries */--------------------
-
-@import "../../node_modules/@splidejs/splide/dist/css/splide-core.min";
 
 /* No styles code below. Only in modules */
 /* Не пишите CSS код ниже. Только в подключаемых файлах */

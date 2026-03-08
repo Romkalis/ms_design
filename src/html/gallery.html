@@ -5,7 +5,7 @@
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Контакты — Команда дизайнеров интерьера</title>
+	<title>Галерея проектов — Команда дизайнеров интерьера</title>
 	<link rel="stylesheet" href="./css/main.css" />
 	<link rel="preload" href="fonts/tilda-sans_regular.woff2" as="font" />
 	<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg" />
@@ -14,18 +14,16 @@
 <body>
 	@@include('blocks/header.html')
 
-	<main class="main contacts__main" id="contacts">
+	<main class="main" id="top">
 
-		<div class="container contacts__grid">
-
-			@@include('blocks/contacts/contacts__info.html')
-			@@include('blocks/contacts/contacts__form.html')
-
-		</div>
+		@@include('blocks/gallery/gallery__content.html')
+		@@include('blocks/main/main__form.html')
 
 	</main>
 
 	@@include('blocks/footer.html')
+	@@include('blocks/modal/image-modal.html')
+	@@include('blocks/cookies/cookie-banner.html')
 	@@include('blocks/ui/scroll-top.html')
 
 

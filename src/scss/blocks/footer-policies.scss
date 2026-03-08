@@ -1,0 +1,18 @@
+.footer__policies {
+	display: flex;
+	justify-content: center;
+	margin-top: 40px;
+	flex-wrap: wrap;
+	gap: 20px;
+
+}
+
+.footer__policy-link {
+	font-size: 14px;
+	color: #666;
+	text-decoration: underline;
+
+	&:hover {
+		color: var(--light);
+	}
+}
