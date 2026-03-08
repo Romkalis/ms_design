@@ -1,27 +1,37 @@
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Page</title>
-		<link rel="stylesheet" href="./css/main.css" />
-		<link rel="preload" href="fonts/tilda-sans_regular.woff2" as="font" />
-		<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg" />
-		<link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png" />
-	</head>
+<html lang="ru">
 
-	<body>
-		@@include('blocks/header.html')
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Команда дизайнеров интерьера — создаём пространства вне времени</title>
+	<link rel="stylesheet" href="/css/main.css" />
+	<link rel="preload" href="/fonts/tilda-sans_regular.woff2" as="font" />
+	<link rel="icon" type="image/x-icon" href="/img/favicons/favicon.svg" />
 
-		<main class="main">
+</head>
 
-			@@include('blocks/main/main_top.html')
+<body>
+	@@include('blocks/header.html')
 
-		</main>
+	<main class="main" id="top">
 
-		@@include('blocks/footer.html')
 
-		<script src="./js/index.bundle.js" type="module"></script>
-	</body>
+		<h1 class="visually-hidden">Команда дизайнеров интерьера</h1>
+
+
+		@@include('blocks/main/main_top.html')
+		@@include('blocks/main/main_about.html')
+		@@include('blocks/main/main_services.html')
+		@@include('blocks/main/main_portfolio.html')
+		@@include('blocks/main/main__form.html')
+
+	</main>
+
+	@@include('blocks/footer.html')
+
+	<script src="./js/index.bundle.js" type="module"></script>
+</body>
+
 </html>

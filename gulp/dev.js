@@ -75,15 +75,6 @@ gulp.task('html:dev', function () {
 				],
 			})
 		)
-		.pipe(
-			webpHTML({
-				extensions: ['jpg', 'jpeg', 'png', 'gif', 'webp'],
-				retina: {
-					1: '',
-					2: '@2x',
-				},
-			})
-		)
 		.pipe(gulp.dest('./build/'));
 });
 

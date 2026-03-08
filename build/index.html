@@ -1,18 +1,19 @@
 <!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Page</title>
-        <link rel="stylesheet" href="./css/main.css" />
-        <link rel="preload" href="./fonts/tilda-sans_regular.woff2" as="font" />
-        <link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg" />
-        <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png" />
-    </head>
+<html lang="ru">
 
-    <body>
-        <header class="header">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Команда дизайнеров интерьера&#160;&#8212; создаём пространства вне времени</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="preload" href="/fonts/tilda-sans_regular.woff2" as="font" />
+    <link rel="icon" type="image/x-icon" href="/img/favicons/favicon.svg" />
+
+</head>
+
+<body>
+    <header class="header">
     <div class="container">
         <nav class="header__navigation" title="Навигация" aria-label="Навигация по сайту">
             <ul class="header__navigation-list">
@@ -29,19 +30,21 @@
                 </li>
 
                 <li class="header__navigation-item header__logo">
-                    <a href="/#top" class="header__navigation-link" title="Дизайнеры" aria-label="На главную страницу">Дизайнеры</a>
+                    <a href="/#top" class="header__navigation-link" title="Дизайнеры"
+						aria-label="На главную страницу">Дизайнеры</a>
                 </li>
 
                 <li class="header__navigation-item">
-                    <a href="/#contacts" class="header__navigation-link" title="Контакты" aria-label="Контакты">Контакты</a>
+                    <a href="/contacts.html" class="header__navigation-link" title="Контакты" aria-label="Контакты">Контакты</a>
                 </li>
 
-                <li class="header__navigation-item">
-                    <a href="/#reviews" class="header__navigation-link" title="Отзывы" aria-label="Отзывы">Отзывы</a>
-                </li>
+                <!-- <li class="header__navigation-item">
+					<a href="/#reviews" class="header__navigation-link" title="Отзывы" aria-label="Отзывы">Отзывы</a>
+				</li> -->
 
                 <li class="header__navigation-item">
-                    <a href="/#form" class="header__navigation-link" title="Запись на консультацию" aria-label="Запись на консультацию">Запись на&#160;консультацию</a>
+                    <a href="/#form" class="header__navigation-link" title="Запись на консультацию"
+						aria-label="Запись на консультацию">Запись на&#160;консультацию</a>
                 </li>
             </ul>
 
@@ -58,31 +61,303 @@
     </div>
 </header>
 
-        <main class="main">
+    <main class="main" id="top">
 
-            <section class="main__top container">
+        <h1 class="visually-hidden">Команда дизайнеров интерьера</h1>
+
+        <section class="main__top container">
   <div class="main__top-wrapper">
     <h2 class="title main__top-title" title="О команде">
-        О&#160;команде
+      О&#160;команде
     </h2>
 
-    <p class="main__top-description">
-      Мы&#160;создаем интерьеры домов вне времени. Работаем с&#160;загородной недвижимостью и&#160;городскими квартирами от&#160;80 квадратных метров. Наши интерьеры имеют свой стиль и&#160;почерк.
+    <p class="main__top-description text-m">
+      Мы&#160;создаем интерьеры домов вне времени. Работаем с&#160;загородной недвижимостью и&#160;городскими квартирами от&#160;80
+      квадратных метров. Наши интерьеры имеют свой стиль и&#160;почерк.
     </p>
 
-    <a href="" class="main__top-link button btn-dark" title="Узнать больше" aria-label="Ссылка узнать больше о нашей команде">
+    <a href="" class="main__top-link button btn-d" title="Узнать больше"
+      aria-label="Ссылка узнать больше о нашей команде">
       Узнать больше
     </a>
 
   </div>
 </section>
+        <section class="main__about" id="about">
+  <div class="container">
+    <h2 class="title-m" title="Команда дизайнеров">Команда дизайнеров</h2>
+    <p class="main__about-description text-m">
+      Наша команда опытных дизайнеров создает уникальные интерьеры, придерживаясь принципа вне времени и&#160;создавая
+      истории
+      для каждого дома.
+    </p>
 
-        </main>
+    <ul class="main__about-list" aria-label="Команда наших дизайнеров">
+      <li class="main__about-item">
+        <img class="main__about-img" src="/img/team/natalia-grexova.webp" alt="Наталья Грехова" />
+        <div class="main__about-item-description">
+          <p class="main__about-name">Наталья Грехова</p>
+          <p class="main__about-text">
+            Дизайнер интерьеров
+          </p>
+          <div class="main__about-divider"></div>
+          <p class="main__about-text">
+            Она ценит индивидуальность каждого клиента и&#160;стремится создать пространство, отражающее его характер и&#160;вкус.
+            Известна
+            своим умением работать с&#160;цветом и&#160;светом, создавая гармоничные и&#160;уютные интерьеры. Любимый стиль эклектика.
+          </p>
+        </div>
+      </li>
 
-        <footer class="footer">
-    <p class="footer__copyright">Copyright 2024</p>
+      <li class="main__about-item">
+        <img class="main__about-img" src="/img/team/olga-baraeva.webp" alt="Ольга Бараева" />
+        <div class="main__about-item-description">
+          <p class="main__about-name">Ольга Бараева</p>
+          <p class="main__about-text">
+            Дизайнер интерьеров
+          </p>
+          <div class="main__about-divider"></div>
+          <p class="main__about-text">
+            Она специализируется на&#160;работе с&#160;пространством, уделяя особое внимание эргономике и&#160;удобству. Работая с
+            освещением и
+            необычными деталями интерьера, создает магию помещения, которое хочется рассматривать. Любимые стили
+            джапанди
+            и
+            эклектика.
+          </p>
+        </div>
+
+      </li>
+
+      <li class="main__about-item">
+        <img class="main__about-img" src="/img/team/olesya-privalova.webp" alt="Олеся Привалова" />
+        <div class="main__about-item-description">
+          <p class="main__about-name">Олеся Привалова</p>
+          <p class="main__about-text">
+            Дизайнер интерьеров
+          </p>
+          <div class="main__about-divider"></div>
+          <p class="main__about-text">
+            Она специализируется на&#160;создании многослойных, но&#160;при этом функциональных и&#160;практичных интерьеров, уделяя
+            особое
+            внимание деталям. Любимые стили классика и&#160;прованс в&#160;свежем прочтении, покорят ваше сердце.
+          </p>
+        </div>
+      </li>
+    </ul>
+
+  </div>
+</section>
+        <section class="main__services container">
+  <h2 class="title-m" title="Услуги">Услуги</h2>
+  <p class="main__services-description text-m">
+    Создаем уникальные интерьеры для загородных домов и&#160;городских квартир от&#160;80&#160;м&#178;.
+  </p>
+
+  <ul class="main__services-list">
+    <li class="main__services-item">
+      <img src="/img/mainpage/services_countryside-house.webp" alt="Дизайн загородных домов" class="main__services-item-picture" title="Дизайн загородных домов" />
+      <div class="main__services-item-info">
+        <h3 class="title-s" title="Дизайн загородных домов">Дизайн загородных домов</h3>
+        <p>
+          Создаём индивидуальные проекты для загородных домов, учитывая все пожелания клиента.
+        </p>
+      </div>
+    </li>
+
+    <li class="main__services-item">
+      <img src="/img/mainpage/services_city-flats.webp" alt="Дизайн городских квартир от 80 кв. м." class="main__services-item-picture" title="Дизайн городских квартир от 80 кв. м." />
+      <div class="main__services-item-info">
+        <h3 class="title-s" title="Дизайн городских квартир от 80 кв. м.">Дизайн городских квартир от&#160;80 кв.&#160;м. </h3>
+        <p>
+          Разрабатываем функциональные и&#160;стильные интерьеры для городских квартир площадью от&#160;80 кв.&#160;м.
+        </p>
+      </div>
+    </li>
+
+    <li class="main__services-item">
+      <img src="/img/mainpage/services_interiors-concept.webp" alt="Разработка концепции интерьера" class="main__services-item-picture" title="Разработка концепции интерьера" />
+      <div class="main__services-item-info">
+        <h3 class="title-s" title="Разработка концепции интерьера">Разработка концепции интерьера</h3>
+        <p>
+          Создаём целостную концепцию интерьера, включая цветовую гамму, мебель и&#160;декор.
+        </p>
+      </div>
+    </li>
+
+    <li class="main__services-item">
+      <img src="/img/mainpage/services_furniture.webp" alt="Подбор мебели и аксессуаров" class="main__services-item-picture" title="Подбор мебели и аксессуаров" />
+      <div class="main__services-item-info">
+        <h3 class="title-s" title="Подбор мебели и аксессуаров">Подбор мебели и&#160;аксессуаров</h3>
+        <p>
+          Помогаем выбрать мебель и&#160;аксессуары, которые гармонично впишутся в&#160;созданный интерьер.
+        </p>
+      </div>
+    </li>
+
+  </ul>
+</section>
+        <section class="main__portfolio">
+  <div class="container">
+    <h2 class="title-m" title="Портфолио">Портфолио</h2>
+    <p class="main__portfolio-description text-m">
+      Примеры наших работ демонстрируют наш стиль и&#160;почерк в&#160;дизайне интерьеров. <br>
+      Мы&#160;гордимся каждым проектом и&#160;рады поделиться результатами с&#160;вами.
+    </p>
+
+    <ul class="main__portfolio-list" aria-label="Команда наших дизайнеров">
+      <li class="main__portfolio-item">
+        <img class="main__portfolio-img" src="/img/mainpage/portfolio_1.webp" alt="Интерьер загородного дома" />
+        <div class="main__portfolio-item-description">
+          <p class="main__portfolio-name">Интерьер загородного дома</p>
+          <p class="main__portfolio-text">
+            Создание уникального стиля с&#160;использованием натуральных материалов и&#160;тёплых оттенков.
+          </p>
+        </div>
+      </li>
+
+      <li class="main__portfolio-item">
+        <img class="main__portfolio-img" src="/img/mainpage/portfolio_2.webp" alt="Дизайн городской квартиры" />
+        <div class="main__portfolio-item-description">
+          <p class="main__portfolio-name">Дизайн городской квартиры</p>
+          <p class="main__portfolio-text">
+            Продуманное пространство для жизни с&#160;акцентом на&#160;функциональность и&#160;комфорт.
+          </p>
+        </div>
+      </li>
+
+      <li class="main__portfolio-item">
+        <img class="main__portfolio-img" src="/img/mainpage/portfolio_3.webp" alt="Современный интерьер" />
+        <div class="main__portfolio-item-description">
+          <p class="main__portfolio-name">Современный интерьер</p>
+          <p class="main__portfolio-text">
+            Сочетание минималистичных форм и&#160;ярких акцентов для создания стильного образа.
+          </p>
+        </div>
+      </li>
+
+      <li class="main__portfolio-item">
+        <img class="main__portfolio-img" src="/img/mainpage/portfolio_4.webp" alt="Дизайн с акцентом на минимализм " />
+        <div class="main__portfolio-item-description">
+          <p class="main__portfolio-accent">Проекты в&#160;современном стиле</p>
+          <p class="main__portfolio-name">Дизайн с&#160;акцентом на&#160;минимализм </p>
+          <p class="main__portfolio-text">
+            Сочетание минималистичных форм и&#160;ярких акцентов для создания стильного образа.
+          </p>
+        </div>
+      </li>
+
+      <li class="main__portfolio-item">
+        <img class="main__portfolio-img" src="/img/mainpage/portfolio_5.webp" alt="Проекты в классическом стиле" />
+        <div class="main__portfolio-item-description">
+          <p class="main__portfolio-accent">Проекты в&#160;классическом стиле</p>
+          <p class="main__portfolio-name">Интерьер с&#160;элементами классики</p>
+          <p class="main__portfolio-text">
+            Примеры классических интерьеров, сочетающих традиции и&#160;современные решения.
+          </p>
+        </div>
+      </li>
+
+      <li class="main__portfolio-item">
+        <img class="main__portfolio-img" src="/img/mainpage/portfolio_6.webp" alt="Проекты в стиле прованс " />
+        <div class="main__portfolio-item-description">
+          <p class="main__portfolio-accent">Проекты в&#160;стиле прованс </p>
+          <p class="main__portfolio-name">Романтический интерьер в&#160;стиле прованс</p>
+          <p class="main__portfolio-text">
+            Примеры интерьеров в&#160;стиле прованс с&#160;использованием натуральных материалов и&#160;светлых тонов.
+          </p>
+        </div>
+      </li>
+
+    </ul>
+
+  </div>
+</section>
+        <section class="main__form" id="form">
+  <div class="container">
+    <div class="main__form-wrapper">
+      <h2 class="title main__form-title">Запись на&#160;консультацию</h2>
+      <p class="main__form-description text-m">
+        Заполните форму, чтобы записаться на&#160;консультацию. Укажите свои контактные данные и&#160;предпочтения по&#160;стилю
+        интерьера.
+      </p>
+
+      <form action="/files/sendmail.php" method="POST" class="form" id="consultation-form">
+        <div class="form__row">
+          <div class="form__group">
+            <label for="name" class="form__label">Ваше имя</label>
+            <input type="text" name="name" id="name" class="form__input" placeholder="Имя" minlength="2" maxlength="20"
+              required>
+            <span class="form__error"></span>
+          </div>
+
+          <div class="form__group">
+            <label for="phone" class="form__label">Ваш номер телефона</label>
+            <input type="tel" name="phone" id="phone" class="form__input" placeholder="+7 (___) ___-__-__" required>
+            <span class="form__error"></span>
+          </div>
+        </div>
+
+        <div class="form__group form__group--full">
+          <label for="comment" class="form__label">Предпочтения по&#160;стилю интерьера</label>
+          <textarea name="comment" id="comment" class="form__input form__textarea" placeholder="Комментарий"></textarea>
+        </div>
+
+        <button type="submit" class="button btn-d form__button">Записаться</button>
+        <div class="form__status"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+    </main>
+
+    <footer class="footer">
+    <div class="footer-container container">
+        <div class="footer__info">
+            <blockquote class="footer__copyright">Дизайн интерьеров</blockquote>
+            <ul class="footer__contacts-list">
+                <li class="footer__contacts-item">
+                    <a href="tel:+74951234567" class="footer__contact" title="+7 495 123-45-67"
+						aria-label="Телефон для связи">Телефон: +7&#160;495&#160;123-45-67</a>
+                </li>
+                <li class="footer__contacts-item">
+                    <a href="mailto:info@TEST.ru" class="footer__contact" title="info@TEST.ru"
+						aria-label="Email для связи">E-почта:
+                        info@TEST.ru</a>
+                </li>
+                <li class="footer__contacts-item">
+                    <p class="footer__contact">
+                        Москва, ул.&#160;Центральная, д.&#160;15, офис&#160;3
+                    </p>
+                </li>
+            </ul>
+        </div>
+
+        <nav class="footer__navigation" title="Навигация по сайту">
+            <ul class="footer__navigation-list">
+                <li class="footer__navigation-item">
+                    <a href="#!" class="footer__navigation-link" title="Главная">Главная</a>
+                </li>
+                <li class="footer__navigation-item">
+                    <a href="#!" class="footer__navigation-link" title="О нас">О&#160;нас</a>
+                </li>
+                <li class="footer__navigation-item">
+                    <a href="#!" class="footer__navigation-link" title="Услуги">Услуги</a>
+                </li>
+                <li class="footer__navigation-item">
+                    <a href="#!" class="footer__navigation-link" title="Проекты">Проекты</a>
+                </li>
+                <li class="footer__navigation-item">
+                    <a href="#!" class="footer__navigation-link" title="Связаться с нами">Связаться с&#160;нами</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <cite>created by&#160;@romkalis 2026</cite>
 </footer>
 
-        <script src="./js/index.bundle.js" type="module"></script>
-    </body>
+    <script src="./js/index.bundle.js" type="module"></script>
+</body>
+
 </html>

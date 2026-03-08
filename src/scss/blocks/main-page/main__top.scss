@@ -1,0 +1,38 @@
+.main__top {
+  margin: 30px auto;
+
+}
+
+.main__top-wrapper {
+  background: linear-gradient(rgba(51, 36, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../../../img/mainpage/main_top.webp);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 80vh;
+  border-radius: 2vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(24px, 3vw, 36px);
+  color: var(--light);
+}
+
+.title {}
+
+.main__top-title {}
+
+.main__top-description {
+  max-width: 65%;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.main__top-link {}
+
+@media (max-width: 820px) {
+  .main__top-description {
+    max-width: 85%;
+  }
+}

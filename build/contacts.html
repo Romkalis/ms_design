@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Контакты&#160;&#8212; Команда дизайнеров интерьера</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="preload" href="./fonts/tilda-sans_regular.woff2" as="font" />
+    <link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg" />
+</head>
+
+<body>
+    <header class="header">
+    <div class="container">
+        <nav class="header__navigation" title="Навигация" aria-label="Навигация по сайту">
+            <ul class="header__navigation-list">
+                <li class="header__navigation-item">
+                    <a href="#about" class="header__navigation-link" title="О нас" aria-label="О нас">О&#160;нас</a>
+                </li>
+
+                <li class="header__navigation-item">
+                    <a href="#services" class="header__navigation-link" title="Услуги" aria-label="Услуги">Услуги</a>
+                </li>
+
+                <li class="header__navigation-item">
+                    <a href="#portfolio" class="header__navigation-link" title="Портфолио" aria-label="Портфолио">Портфолио</a>
+                </li>
+
+                <li class="header__navigation-item header__logo">
+                    <a href="/#top" class="header__navigation-link" title="Дизайнеры"
+						aria-label="На главную страницу">Дизайнеры</a>
+                </li>
+
+                <li class="header__navigation-item">
+                    <a href="/contacts.html" class="header__navigation-link" title="Контакты" aria-label="Контакты">Контакты</a>
+                </li>
+
+                <!-- <li class="header__navigation-item">
+					<a href="/#reviews" class="header__navigation-link" title="Отзывы" aria-label="Отзывы">Отзывы</a>
+				</li> -->
+
+                <li class="header__navigation-item">
+                    <a href="/#form" class="header__navigation-link" title="Запись на консультацию"
+						aria-label="Запись на консультацию">Запись на&#160;консультацию</a>
+                </li>
+            </ul>
+
+            <div class="header__mobile-logo header__logo mobile-view">
+                <a href="/#top" class="header__navigation-link" title="Дизайнеры" aria-label="На главную страницу">Дизайнеры</a>
+            </div>
+        </nav>
+
+        <button class="header__burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</header>
+
+    <main class="main contacts__main" id="contacts">
+
+        <div class="container contacts__grid">
+
+            <section class="contacts-info">
+    <h1 class="title">Наши контакты</h1>
+    <ul class="contacts-info__list">
+        <li class="contacts-info__item">
+            <a href="tel:+74951234567" class="contacts-info__link" title="+7 495 123-45-67"
+				aria-label="Телефон для связи">Телефон: +7&#160;495&#160;123-45-67</a>
+        </li>
+        <li class="contacts-info__item">
+            <a href="mailto:info@TEST.ru" class="contacts-info__link" title="info@TEST.ru"
+				aria-label="Email для связи">E-почта: info@TEST.ru</a>
+        </li>
+        <li class="contacts-info__item">
+            <p class="contacts-info__text">
+                Москва, ул.&#160;Центральная, д.&#160;15, офис&#160;3
+            </p>
+        </li>
+    </ul>
+</section>
+            <section class="contacts__form" id="form">
+  <div class="contacts__form-wrapper">
+    <h2 class="title contacts__form-title">Обратная связь</h2>
+    <p class="contacts__form-description text-m">
+      Оставьте свои вопросы и&#160;комментарии в&#160;форме обратной связи. Мы&#160;всегда рады услышать ваше мнение и&#160;ответить на
+      ваши
+      вопросы.
+    </p>
+
+    <form action="/files/sendmail.php" method="POST" class="form" id="consultation-form">
+      <div class="form__row">
+        <div class="form__group">
+          <label for="name" class="form__label">Ваше имя</label>
+          <input type="text" name="name" id="name" class="form__input" placeholder="Имя" minlength="2" maxlength="20"
+            required>
+          <span class="form__error"></span>
+        </div>
+
+        <div class="form__group">
+          <label for="phone" class="form__label">Ваш номер телефона</label>
+          <input type="tel" name="phone" id="phone" class="form__input" placeholder="+7 (___) ___-__-__" required>
+          <span class="form__error"></span>
+        </div>
+      </div>
+
+      <div class="form__group form__group--full">
+        <label for="comment" class="form__label">Предпочтения по&#160;стилю интерьера</label>
+        <textarea name="comment" id="comment" class="form__input form__textarea" placeholder="Комментарий"></textarea>
+      </div>
+
+      <button type="submit" class="button btn-d form__button">Записаться</button>
+      <div class="form__status"></div>
+    </form>
+  </div>
+</section>
+
+        </div>
+
+    </main>
+
+    <footer class="footer">
+    <div class="footer-container container">
+        <div class="footer__info">
+            <blockquote class="footer__copyright">Дизайн интерьеров</blockquote>
+            <ul class="footer__contacts-list">
+                <li class="footer__contacts-item">
+                    <a href="tel:+74951234567" class="footer__contact" title="+7 495 123-45-67"
+						aria-label="Телефон для связи">Телефон: +7&#160;495&#160;123-45-67</a>
+                </li>
+                <li class="footer__contacts-item">
+                    <a href="mailto:info@TEST.ru" class="footer__contact" title="info@TEST.ru"
+						aria-label="Email для связи">E-почта:
+                        info@TEST.ru</a>
+                </li>
+                <li class="footer__contacts-item">
+                    <p class="footer__contact">
+                        Москва, ул.&#160;Центральная, д.&#160;15, офис&#160;3
+                    </p>
+                </li>
+            </ul>
+        </div>
+
+        <nav class="footer__navigation" title="Навигация по сайту">
+            <ul class="footer__navigation-list">
+                <li class="footer__navigation-item">
+                    <a href="#!" class="footer__navigation-link" title="Главная">Главная</a>
+                </li>
+                <li class="footer__navigation-item">
+                    <a href="#!" class="footer__navigation-link" title="О нас">О&#160;нас</a>
+                </li>
+                <li class="footer__navigation-item">
+                    <a href="#!" class="footer__navigation-link" title="Услуги">Услуги</a>
+                </li>
+                <li class="footer__navigation-item">
+                    <a href="#!" class="footer__navigation-link" title="Проекты">Проекты</a>
+                </li>
+                <li class="footer__navigation-item">
+                    <a href="#!" class="footer__navigation-link" title="Связаться с нами">Связаться с&#160;нами</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <cite>created by&#160;@romkalis 2026</cite>
+</footer>
+
+    <script src="./js/index.bundle.js" type="module"></script>
+</body>
+
+</html>
