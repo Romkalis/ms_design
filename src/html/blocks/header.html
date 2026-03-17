@@ -1,7 +1,7 @@
 <header class="header">
 	<div class="container">
 		<nav class="header__navigation" title="Навигация" aria-label="Навигация по сайту">
-			<ul class="header__navigation-list">
+			<ul class="header__navigation-list" id="headerNav">
 				<li class="header__navigation-item">
 					<a href="/#about" class="header__navigation-link" title="О нас" aria-label="О нас">О нас</a>
 				</li>
@@ -41,7 +41,8 @@
 			</div>
 		</nav>
 
-		<button class="header__burger">
+		<button class="header__burger" type="button" title="Меню" aria-label="Открыть меню" aria-controls="headerNav"
+			aria-expanded="false">
 			<span></span>
 			<span></span>
 			<span></span>

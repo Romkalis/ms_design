@@ -4,14 +4,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	const modalImg = modal.querySelector(".image-modal__img");
 	const closeElements = modal.querySelectorAll("[data-close]");
-	
+	const closeButton = modal.querySelector(".image-modal__close");
+	let lastActiveElement = null;
+	const placeholderSrc = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
+
 	// Функция открытия модалки
 	function openModal(src, alt) {
+		lastActiveElement = document.activeElement;
 		modalImg.src = src;
 		modalImg.alt = alt || "";
 		modal.classList.add("is-open");
 		modal.setAttribute("aria-hidden", "false");
 		document.body.style.overflow = "hidden"; // Блокируем скролл страницы
+		if (closeButton) closeButton.focus();
 	}
 
 	// Функция закрытия модалки
@@ -20,9 +25,19 @@ document.addEventListener("DOMContentLoaded", function () {
 		modal.setAttribute("aria-hidden", "true");
 		document.body.style.overflow = ""; // Возвращаем скролл
 		setTimeout(() => {
-			modalImg.src = ""; // Очищаем src после анимации закрытия
+			modalImg.src = placeholderSrc; // Очищаем src после анимации закрытия
 		}, 300);
+		if (lastActiveElement && typeof lastActiveElement.focus === "function") {
+			lastActiveElement.focus();
+		}
 	}
+
+	document.querySelectorAll(".js-modal-image").forEach((el) => {
+		if (!el.hasAttribute("tabindex")) el.setAttribute("tabindex", "0");
+		if (!el.hasAttribute("role")) el.setAttribute("role", "button");
+		if (!el.hasAttribute("title")) el.setAttribute("title", "Открыть изображение");
+		if (!el.hasAttribute("aria-label")) el.setAttribute("aria-label", "Открыть изображение");
+	});
 
 	// Делегирование событий для открытия модалки
 	document.addEventListener("click", function (e) {
@@ -33,11 +48,22 @@ document.addEventListener("DOMContentLoaded", function () {
 			// Проверяем, есть ли data-src (для хайрезов), иначе берем src
 			const src = target.dataset.fullSrc || img.src;
 			const alt = img.alt;
-			
+
 			if (src) {
 				openModal(src, alt);
 			}
 		}
+	});
+
+	document.addEventListener("keydown", function (e) {
+		if (e.key !== "Enter" && e.key !== " ") return;
+		const target = e.target.closest(".js-modal-image");
+		if (!target) return;
+		e.preventDefault();
+		const img = target.querySelector("img") || target;
+		const src = target.dataset.fullSrc || img.src;
+		const alt = img.alt;
+		if (src) openModal(src, alt);
 	});
 
 	// Обработчики закрытия

@@ -12,14 +12,15 @@
           <div class="form__group">
             <label for="name" class="form__label">Ваше имя</label>
             <input type="text" name="name" id="name" class="form__input" placeholder="Имя" minlength="2" maxlength="20"
-              required>
-            <span class="form__error"></span>
+              required autocomplete="name" aria-describedby="nameError" aria-invalid="false">
+            <span class="form__error" id="nameError" aria-live="polite"></span>
           </div>
 
           <div class="form__group">
             <label for="phone" class="form__label">Ваш номер телефона</label>
-            <input type="tel" name="phone" id="phone" class="form__input" placeholder="+7 (___) ___-__-__" required>
-            <span class="form__error"></span>
+            <input type="tel" name="phone" id="phone" class="form__input" placeholder="+7 (___) ___-__-__" required
+              autocomplete="tel" inputmode="tel" aria-describedby="phoneError" aria-invalid="false">
+            <span class="form__error" id="phoneError" aria-live="polite"></span>
           </div>
         </div>
 
@@ -28,8 +29,9 @@
           <textarea name="comment" id="comment" class="form__input form__textarea" placeholder="Комментарий"></textarea>
         </div>
 
-        <button type="submit" class="button btn-d form__button">Записаться</button>
-        <div class="form__status"></div>
+        <button type="submit" class="button btn-d form__button" title="Отправить заявку"
+          aria-label="Отправить заявку на консультацию">Записаться</button>
+        <div class="form__status" aria-live="polite"></div>
       </form>
     </div>
   </div>

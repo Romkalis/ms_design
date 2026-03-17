@@ -36,4 +36,33 @@ document.addEventListener("DOMContentLoaded", function () {
 		// Проверка при изменении размера окна
 		window.addEventListener("resize", initSplide);
 	});
+
+	const worksSliders = document.querySelectorAll(".works__slider");
+
+	worksSliders.forEach((sliderElement) => {
+		let splideInstance = null;
+
+		function initSplide() {
+			if (window.innerWidth < 768) {
+				if (!splideInstance) {
+					splideInstance = new Splide(sliderElement, {
+						type: "loop",
+						perPage: 1,
+						pagination: true,
+						arrows: true,
+						gap: "20px",
+					});
+					splideInstance.mount();
+				}
+			} else {
+				if (splideInstance) {
+					splideInstance.destroy();
+					splideInstance = null;
+				}
+			}
+		}
+
+		initSplide();
+		window.addEventListener("resize", initSplide);
+	});
 });

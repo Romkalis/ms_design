@@ -4,9 +4,11 @@ const navLinks = document.querySelectorAll(".header__navigation-link");
 
 if (burger && nav) {
 	burger.addEventListener("click", () => {
-		burger.classList.toggle("header__burger--active");
+		const isActive = burger.classList.toggle("header__burger--active");
 		nav.classList.toggle("active");
 		document.body.classList.toggle("no-scroll");
+		burger.setAttribute("aria-expanded", String(isActive));
+		burger.setAttribute("aria-label", isActive ? "Закрыть меню" : "Открыть меню");
 	});
 
 	navLinks.forEach((link) => {
@@ -14,6 +16,8 @@ if (burger && nav) {
 			burger.classList.remove("header__burger--active");
 			nav.classList.remove("active");
 			document.body.classList.remove("no-scroll");
+			burger.setAttribute("aria-expanded", "false");
+			burger.setAttribute("aria-label", "Открыть меню");
 		});
 	});
 }

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8" />
@@ -15,7 +15,7 @@
     <header class="header">
     <div class="container">
         <nav class="header__navigation" title="Навигация" aria-label="Навигация по сайту">
-            <ul class="header__navigation-list">
+            <ul class="header__navigation-list" id="headerNav">
                 <li class="header__navigation-item">
                     <a href="/#about" class="header__navigation-link" title="О нас" aria-label="О нас">О&#160;нас</a>
                 </li>
@@ -55,7 +55,8 @@
             </div>
         </nav>
 
-        <button class="header__burger">
+        <button class="header__burger" type="button" title="Меню" aria-label="Открыть меню" aria-controls="headerNav"
+			aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
@@ -64,24 +65,26 @@
 </header>
 
     <main class="main contacts__main" id="contacts">
+        <h1 class="visually-hidden">Контакты</h1>
 
         <div class="container contacts__grid">
 
             <section class="contacts-info">
     <h1 class="title">Наши контакты</h1>
     <ul class="contacts-info__list">
-        <li class="contacts-info__item">
-            <a href="tel:+74951234567" class="contacts-info__link" title="+7 495 123-45-67"
+        <li class="footer__contacts-item">
+            <a href="tel:+74951234567" class="footer__contact footer__tel" title="+7 495 123-45-67"
 				aria-label="Телефон для связи">Телефон: +7&#160;495&#160;123-45-67</a>
         </li>
-        <li class="contacts-info__item">
-            <a href="mailto:info@TEST.ru" class="contacts-info__link" title="info@TEST.ru"
-				aria-label="Email для связи">E-почта: info@TEST.ru</a>
+        <li class="footer__contacts-item">
+            <a href="mailto:info@TEST.ru" class="footer__contact footer__mail" title="info@TEST.ru"
+				aria-label="Email для связи">E-почта:
+                info@TEST.ru</a>
         </li>
-        <li class="contacts-info__item">
-            <p class="contacts-info__text">
-                Москва, ул.&#160;Центральная, д.&#160;15, офис&#160;3
-            </p>
+        <li class="footer__contacts-item">
+            <a href="https://t.me/cehbBD" class="footer__contact footer__tg">
+                Наш Телеграм
+            </a>
         </li>
     </ul>
 </section>
@@ -128,53 +131,58 @@
     <footer class="footer">
     <div class="footer-container container">
         <div class="footer__info">
-            <blockquote class="footer__copyright">Дизайн интерьеров</blockquote>
+            <p class="footer__copyright">Дизайн интерьеров</p>
             <ul class="footer__contacts-list">
                 <li class="footer__contacts-item">
-                    <a href="tel:+74951234567" class="footer__contact" title="+7 495 123-45-67"
+                    <a href="tel:+74951234567" class="footer__contact footer__tel" title="+7 495 123-45-67"
 						aria-label="Телефон для связи">Телефон: +7&#160;495&#160;123-45-67</a>
                 </li>
                 <li class="footer__contacts-item">
-                    <a href="mailto:info@TEST.ru" class="footer__contact" title="info@TEST.ru"
+                    <a href="mailto:info@TEST.ru" class="footer__contact footer__mail" title="info@TEST.ru"
 						aria-label="Email для связи">E-почта:
                         info@TEST.ru</a>
                 </li>
                 <li class="footer__contacts-item">
-                    <p class="footer__contact">
-                        Москва, ул.&#160;Центральная, д.&#160;15, офис&#160;3
-                    </p>
+                    <a href="https://t.me/cehbBD" class="footer__contact footer__tg">
+                        Наш Телеграм
+                    </a>
                 </li>
             </ul>
 
         </div>
 
-        <nav class="footer__navigation" title="Навигация по сайту">
+        <nav class="footer__navigation" title="Навигация по сайту" aria-label="Навигация по сайту">
             <ul class="footer__navigation-list">
                 <li class="footer__navigation-item">
-                    <a href="#!" class="footer__navigation-link" title="Главная">Главная</a>
+                    <a href="/#top" class="footer__navigation-link" title="Главная" aria-label="Перейти на главную">Главная</a>
                 </li>
                 <li class="footer__navigation-item">
-                    <a href="#!" class="footer__navigation-link" title="О нас">О&#160;нас</a>
+                    <a href="/#about" class="footer__navigation-link" title="О нас" aria-label="Перейти к разделу О нас">О&#160;нас</a>
                 </li>
                 <li class="footer__navigation-item">
-                    <a href="#!" class="footer__navigation-link" title="Услуги">Услуги</a>
+                    <a href="/#services" class="footer__navigation-link" title="Услуги"
+						aria-label="Перейти к разделу Услуги">Услуги</a>
                 </li>
                 <li class="footer__navigation-item">
-                    <a href="#!" class="footer__navigation-link" title="Проекты">Проекты</a>
+                    <a href="/#portfolio" class="footer__navigation-link" title="Проекты"
+						aria-label="Перейти к портфолио">Проекты</a>
                 </li>
                 <li class="footer__navigation-item">
-                    <a href="#!" class="footer__navigation-link" title="Связаться с нами">Связаться с&#160;нами</a>
+                    <a href="/#form" class="footer__navigation-link" title="Связаться с нами"
+						aria-label="Перейти к форме обратной связи">Связаться с&#160;нами</a>
                 </li>
             </ul>
         </nav>
     </div>
     <div class="footer__policies">
-        <a href="/privacy-policy.html" class="footer__policy-link">Политика конфиденциальности</a>
-        <a href="/cookie-policy.html" class="footer__policy-link">Политика cookie</a>
+        <a href="/privacy-policy.html" class="footer__policy-link" title="Политика конфиденциальности"
+			aria-label="Открыть Политику конфиденциальности">Политика конфиденциальности</a>
+        <a href="/cookie-policy.html" class="footer__policy-link" title="Политика cookie"
+			aria-label="Открыть Политику использования cookie">Политика cookie</a>
     </div>
     <cite>created by&#160;@romkalis 2026</cite>
 </footer>
-    <button class="scroll-top" id="scrollTop" type="button" aria-label="Наверх">
+    <button class="scroll-top" id="scrollTop" type="button" aria-label="Наверх" title="Наверх">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M12 4L4 12L5.41 13.41L11 7.83V20H13V7.83L18.58 13.41L20 12L12 4Z" fill="orange" />
     </svg>

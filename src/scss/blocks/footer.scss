@@ -41,6 +41,34 @@
   gap: 1em;
 }
 
+.footer__contact {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  position: relative;
+}
+
+.footer__contact::before {
+  content: "";
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 24px;
+  aspect-ratio: 1;
+}
+
+.footer__tel::before {
+  background-image: url("../../img/logos/phone.svg");
+}
+
+.footer__mail::before {
+  background-image: url("../../img/logos/mail.svg");
+}
+
+.footer__tg::before {
+  background-image: url("../../img/logos/tg.svg");
+}
+
 // .footer__contacts-item {}
 // .footer__contact {}
 // .footer__navigation {}

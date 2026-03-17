@@ -29,9 +29,46 @@ const changed = require("gulp-changed");
 const imagemin = require("gulp-imagemin");
 const imageminWebp = require("imagemin-webp");
 const rename = require("gulp-rename");
+const net = require("net");
 
 // SVG
 const svgsprite = require("gulp-svg-sprite");
+
+function canListen(port, host) {
+	return new Promise((resolve) => {
+		const tester = net
+			.createServer()
+			.once("error", () => resolve(false))
+			.once("listening", () => {
+				tester.close(() => resolve(true));
+			})
+			.listen(port, host);
+	});
+}
+
+function findFreePort(startPort, host) {
+	return new Promise((resolve) => {
+		const maxTries = 20;
+		let port = startPort;
+
+		const tryNext = () => {
+			canListen(port, host).then((ok) => {
+				if (ok) {
+					resolve(port);
+					return;
+				}
+				port += 1;
+				if (port >= startPort + maxTries) {
+					resolve(startPort);
+					return;
+				}
+				tryNext();
+			});
+		};
+
+		tryNext();
+	});
+}
 
 gulp.task("clean:docs", function (done) {
 	if (fs.existsSync("./docs/")) {
@@ -109,8 +146,7 @@ gulp.task("sass:docs", function () {
 
 gulp.task("images:docs", function () {
 	return gulp
-		.src(["./src/img/**/*", "!./src/img/svgicons/**/*"])
-		.pipe(changed("./docs/img/"))
+		.src(["./src/img/**/*.{jpg,jpeg,png}", "!./src/img/svgicons/**/*"])
 		.pipe(
 			imagemin([
 				imageminWebp({
@@ -120,9 +156,8 @@ gulp.task("images:docs", function () {
 		)
 		.pipe(rename({extname: ".webp"}))
 		.pipe(gulp.dest("./docs/img/"))
-		.pipe(gulp.src("./src/img/**/*"))
+		.pipe(gulp.src(["./src/img/**/*", "!./src/img/**/*.{jpg,jpeg,png}", "!./src/img/svgicons/**/*"]))
 		.pipe(changed("./docs/img/"))
-		.pipe(imagemin([imagemin.gifsicle({interlaced: true}), imagemin.mozjpeg({quality: 85, progressive: true}), imagemin.optipng({optimizationLevel: 5})], {verbose: true}))
 		.pipe(gulp.dest("./docs/img/"));
 });
 
@@ -188,13 +223,29 @@ gulp.task("js:docs", function () {
 		.pipe(gulp.dest("./docs/js/"));
 });
 
-const serverOptions = {
-	livereload: true,
-	open: true,
-};
-
 gulp.task("server:docs", function () {
-	return gulp.src("./docs/").pipe(server(serverOptions));
+	const host = process.env.DOCS_HOST || "localhost";
+	const preferredPort = Number(process.env.DOCS_PORT) || 8000;
+	const preferredLrPort = Number(process.env.LIVERELOAD_PORT) || 35729;
+
+	return Promise.all([findFreePort(preferredPort, host), findFreePort(preferredLrPort, host)]).then(([port, livereloadPort]) => {
+		const serverOptions = {
+			host,
+			port,
+			livereload: {
+				enable: true,
+				port: livereloadPort,
+				filter: function (filePath) {
+					const normalized = String(filePath).replace(/\\/g, "/");
+					if (normalized.includes("/node_modules/")) return false;
+					if (normalized.includes("/fonts/")) return false;
+					return !/\.(?:map|woff2?|ttf|otf|eot)(?:$|\?)/i.test(normalized);
+				},
+			},
+			open: true,
+		};
+		return gulp.src("./docs/").pipe(server(serverOptions));
+	});
 });
 
 gulp.task("favicon:docs", function () {

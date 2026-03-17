@@ -78,8 +78,9 @@ document.addEventListener("DOMContentLoaded", function () {
 		submitBtn.textContent = "Отправляется...";
 
 		const formData = new FormData(form);
+		const endpoint = form.getAttribute("action") || "/files/sendmail.php";
 
-		fetch("files/sendmail.php", {
+		fetch(endpoint, {
 			method: "POST",
 			body: formData,
 		})
@@ -107,6 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	function showError(input, message) {
 		input.classList.add("error");
+		input.setAttribute("aria-invalid", "true");
 		const group = input.closest(".form__group");
 		let errorSpan = group.querySelector(".form__error");
 		if (!errorSpan) {
@@ -121,6 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		const inputs = form.querySelectorAll(".form__input");
 		inputs.forEach((input) => {
 			input.classList.remove("error");
+			input.setAttribute("aria-invalid", "false");
 			const group = input.closest(".form__group");
 			const errorSpan = group.querySelector(".form__error");
 			if (errorSpan) errorSpan.textContent = "";

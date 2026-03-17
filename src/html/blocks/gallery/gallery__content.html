@@ -1,66 +1,127 @@
-<section class="gallery">
+<section class="gallery" id="gallery">
 	<div class="container">
 
+		<nav class="gallery__nav" aria-label="Разделы галереи">
+			<ul class="gallery__nav-list">
+				<li class="gallery__nav-item">
+					<a class="gallery__nav-link" href="#visualizations">Визуализации</a>
+				</li>
+				<li class="gallery__nav-item">
+					<a class="gallery__nav-link" href="#flats">Дизайн квартир</a>
+				</li>
+				<li class="gallery__nav-item">
+					<a class="gallery__nav-link" href="#country-houses">Загородные дома</a>
+				</li>
+				<li class="gallery__nav-item">
+					<a class="gallery__nav-link" href="#modern-interior">Современный интерьер</a>
+				</li>
+				<!-- <li class="gallery__nav-item">
+					<a class="gallery__nav-link" href="#modern-projects">Современный стиль</a>
+				</li> -->
+				<li class="gallery__nav-item">
+					<a class="gallery__nav-link" href="#classic-projects">Классика</a>
+				</li>
+				<!-- <li class="gallery__nav-item">
+					<a class="gallery__nav-link" href="#provance-projects">Прованс</a>
+				</li> -->
+			</ul>
+		</nav>
+
+
+		<!-- Визуализации -->
+		<div class="gallery__section" id="visualizations">
+			<h2 class="gallery__title title">Визуализации / Реальность</h2>
+			<div class="splide gallery__slider">
+				<div class="splide__track">
+					<ul class="splide__list gallery__list">
+						<li class="splide__slide">
+							<a href="/gallery/visualization-south-disctricts.html" class="gallery__item">
+								<img src="/img/gallery/visualizations/south-district-flat/4.webp" alt="Зеленые кварталы"
+									class="gallery__img">
+								<div class="gallery__card-content">
+									<p class="gallery__slide-title title-s">Квартира в "Южных Кварталах"</p>
+								</div>
+							</a>
+						</li>
+						<li class="splide__slide">
+							<a href="/gallery/visualization-green-disctricts.html" class="gallery__item">
+								<img src="/img/gallery/visualizations/green-districts/11.webp" alt="Зеленые кварталы"
+									class="gallery__img">
+								<div class="gallery__card-content">
+									<p class="gallery__slide-title title-s">Зеленые кварталы</p>
+								</div>
+							</a>
+						</li>
+						<li class="splide__slide">
+							<a href="/gallery/visualization-clever-park-flat.html" class="gallery__item">
+								<img src="/img/gallery/visualizations/clever-park-flat/1.webp" alt="Квартира 88кв.м. в CleverPark"
+									class="gallery__img">
+								<div class="gallery__card-content">
+									<p class="gallery__slide-title title-s">Квартира 88кв.м. в CleverPark</p>
+								</div>
+							</a>
+						</li>
+
+						<li class="splide__slide">
+							<a href="/gallery/visualization-house-orel.html" class="gallery__item">
+								<img src="/img/gallery/visualizations/house-orel/1.webp" alt="Дом Орел" class="gallery__img">
+								<div class="gallery__card-content">
+									<p class="gallery__slide-title title-s">Дом Орел</p>
+								</div>
+							</a>
+						</li>
+
+						<li class="splide__slide">
+							<a href="/gallery/visualization-tixvin.html" class="gallery__item">
+								<img src="/img/gallery/visualizations/tixvin/1.webp" alt="Тихвин" class="gallery__img">
+								<div class="gallery__card-content">
+									<p class="gallery__slide-title title-s">Тихвин</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
 		<!-- Дизайн квартир -->
-		<div class="gallery__section" id="country-houses">
+		<div class="gallery__section" id="flats">
 			<h2 class="gallery__title title">Дизайн квартир</h2>
 			<div class="splide gallery__slider">
 				<div class="splide__track">
 					<ul class="splide__list gallery__list">
-						<li class="splide__slide gallery__item">
-							<img src="./img/mainpage/portfolio_1.webp" alt="Дизайн загородного дома 1"
-								class="gallery__img js-modal-image">
-							<div class="gallery__card-content">
-								<p class="gallery__slide-title title-s">Загородный дом "Лесной"</p>
-								<p class="gallery__slide-description">Просторная гостиная с панорамными окнами и камином, выполненная в
-									натуральных тонах.</p>
-							</div>
+						<li class="splide__slide">
+							<a href="/gallery/south-district-flat.html" class="gallery__item">
+								<img src="/img/gallery/flats/south-district-flat/1.webp"
+									alt="Двухуровневая квартира в ЖК Южные кварталы" class="gallery__img">
+								<div class="gallery__card-content">
+									<p class="gallery__slide-title title-s">Двухуровневая квартира в ЖК Южные кварталы
+									</p>
+									<p class="gallery__slide-description">Проект со свободной планировкой, где мы спроектировали лестницу,
+										сохранили кирпичные стены в стиле нью-йоркских лофтов,
+										создали компактную кухню и уютные спальни. На втором этаже — мастер-блок с ванной у окна, детские
+										комнаты и санузел.
+										Интерьер стал самобытной историей с яркими акцентами и арт-объектами.</p>
+								</div>
+							</a>
 						</li>
-						<li class="splide__slide gallery__item">
-							<img src="./img/mainpage/portfolio_2.webp" alt="Дизайн загородного дома 2"
-								class="gallery__img js-modal-image">
-							<div class="gallery__card-content">
-								<p class="gallery__slide-title title-s">Коттедж "Озерный"</p>
-								<p class="gallery__slide-description">Уютная спальня с видом на озеро, использование дерева и камня в
-									отделке.</p>
-							</div>
+
+						<li class="splide__slide">
+							<a href="/gallery/flat-nagorny.html" class="gallery__item">
+								<img src="/img/gallery/flats/flat-nagorny/1.webp" alt="Двухуровневая квартира в ЖК Нагорный"
+									class="gallery__img">
+								<div class="gallery__card-content">
+									<p class="gallery__slide-title title-s">Квартира в ЖК «Нагорный»
+									</p>
+									<p class="gallery__slide-description">Интерьер для молодой девушки, где светлые тона и радиусные углы
+										мебели создают атмосферу нежности. Барная стойка вместо
+										стола, витрина для любимой посуды, несколько сценариев освещения, уютная спальня и кабинет с
+										панорамными окнами — всё
+										продумано для стиля и уюта.</p>
+								</div>
+							</a>
 						</li>
-						<li class="splide__slide gallery__item">
-							<img src="./img/mainpage/portfolio_3.webp" alt="Дизайн загородного дома 3"
-								class="gallery__img js-modal-image">
-							<div class="gallery__card-content">
-								<p class="gallery__slide-title title-s">Вилла "Солнечная"</p>
-								<p class="gallery__slide-description">Современная кухня-столовая с выходом на террасу, светлые тона и
-									функциональность.</p>
-							</div>
-						</li>
-						<li class="splide__slide gallery__item">
-							<img src="./img/mainpage/portfolio_1.webp" alt="Дизайн загородного дома 1"
-								class="gallery__img js-modal-image">
-							<div class="gallery__card-content">
-								<p class="gallery__slide-title title-s">Загородный дом "Лесной"</p>
-								<p class="gallery__slide-description">Просторная гостиная с панорамными окнами и камином, выполненная в
-									натуральных тонах.</p>
-							</div>
-						</li>
-						<li class="splide__slide gallery__item">
-							<img src="./img/mainpage/portfolio_2.webp" alt="Дизайн загородного дома 2"
-								class="gallery__img js-modal-image">
-							<div class="gallery__card-content">
-								<p class="gallery__slide-title title-s">Коттедж "Озерный"</p>
-								<p class="gallery__slide-description">Уютная спальня с видом на озеро, использование дерева и камня в
-									отделке.</p>
-							</div>
-						</li>
-						<li class="splide__slide gallery__item">
-							<img src="./img/mainpage/portfolio_3.webp" alt="Дизайн загородного дома 3"
-								class="gallery__img js-modal-image">
-							<div class="gallery__card-content">
-								<p class="gallery__slide-title title-s">Вилла "Солнечная"</p>
-								<p class="gallery__slide-description">Современная кухня-столовая с выходом на террасу, светлые тона и
-									функциональность.</p>
-							</div>
-						</li>
+
 					</ul>
 				</div>
 			</div>
@@ -72,59 +133,148 @@
 			<div class="splide gallery__slider">
 				<div class="splide__track">
 					<ul class="splide__list gallery__list">
-						<li class="splide__slide gallery__item">
-							<img src="./img/mainpage/portfolio_1.webp" alt="Дизайн загородного дома 1"
-								class="gallery__img js-modal-image">
-							<div class="gallery__card-content">
-								<p class="gallery__slide-title title-s">Загородный дом "Лесной"</p>
-								<p class="gallery__slide-description">Просторная гостиная с панорамными окнами и камином, выполненная в
-									натуральных тонах.</p>
-							</div>
+						<li class="splide__slide">
+							<a href="/gallery/tanin-dom.html" class="gallery__item">
+								<img src="/img/gallery/houses/tanin-dom/1.webp" alt="Дизайн загородного дома 1" class="gallery__img">
+								<div class="gallery__card-content">
+									<p class="gallery__slide-title title-s">Танин дом — лёгкий интерьер</p>
+									<p class="gallery__slide-description">Загородный проект, где минимальные затраты превратились в
+										уникальные решения: кухня без верхних шкафов,
+										портьеры вместо
+										встроенного хранения, открытые полки в спальне и будуарная ванная с французским акцентом. Свет,
+										зеркала и
+										текстиль
+										сделали пространство свежим, уютным и вдохновляющим.</p>
+								</div>
+							</a>
 						</li>
-						<li class="splide__slide gallery__item">
-							<img src="./img/mainpage/portfolio_2.webp" alt="Дизайн загородного дома 2"
-								class="gallery__img js-modal-image">
-							<div class="gallery__card-content">
-								<p class="gallery__slide-title title-s">Коттедж "Озерный"</p>
-								<p class="gallery__slide-description">Уютная спальня с видом на озеро, использование дерева и камня в
-									отделке.</p>
-							</div>
+
+						<li class="splide__slide">
+							<a href="/gallery/orange-mood.html" class="gallery__item">
+								<img src="/img/gallery/houses/orange-mood/1.webp" alt="Дизайн загородного дома Оранжевое настроение"
+									class="gallery__img">
+								<div class="gallery__card-content">
+									<p class="gallery__slide-title title-s">Дом «Оранжевое настроение»</p>
+									<p class="gallery__slide-description">Проект в Курганово для молодой семьи стал ярким экспериментом:
+										синяя кухня с апельсиновым холодильником, зеркальный
+										фартук в форме дольки, холодное освещение и знаковые предметы декора.</p>
+								</div>
+							</a>
 						</li>
-						<li class="splide__slide gallery__item">
-							<img src="./img/mainpage/portfolio_3.webp" alt="Дизайн загородного дома 3"
-								class="gallery__img js-modal-image">
-							<div class="gallery__card-content">
-								<p class="gallery__slide-title title-s">Вилла "Солнечная"</p>
-								<p class="gallery__slide-description">Современная кухня-столовая с выходом на террасу, светлые тона и
-									функциональность.</p>
-							</div>
+
+						<li class="splide__slide">
+							<a href="/gallery/iset-villadj.html" class="gallery__item">
+								<img src="/img/gallery/houses/iset-villadj/1.webp" alt="Дом в Исеть Вилладж — уют для двоих"
+									class="gallery__img">
+								<div class="gallery__card-content">
+									<p class="gallery__slide-title title-s">Дом в Исеть Вилладж — уют для двоих</p>
+									<p class="gallery__slide-description">Просторный частный дом 100 кв.м для молодой пары: кухня-гостиная
+										33 кв.м, спальня с гардеробной и санузлом, графитовый
+										шкаф, дымчатая акцентная стена и продуманная гардеробная хозяйки.</p>
+								</div>
+							</a>
 						</li>
-						<li class="splide__slide gallery__item">
-							<img src="./img/mainpage/portfolio_1.webp" alt="Дизайн загородного дома 1"
-								class="gallery__img js-modal-image">
-							<div class="gallery__card-content">
-								<p class="gallery__slide-title title-s">Загородный дом "Лесной"</p>
-								<p class="gallery__slide-description">Просторная гостиная с панорамными окнами и камином, выполненная в
-									натуральных тонах.</p>
-							</div>
+						<li class="splide__slide">
+							<a href="/gallery/all-family-countryhouse.html" class="gallery__item">
+								<img src="/img/gallery/houses/all-family-countryhouse/1.webp" alt="Дача для всей семьи - круглый год"
+									class="gallery__img">
+								<div class="gallery__card-content">
+									<p class="gallery__slide-title title-s">Дача для всей семьи - круглый год</p>
+									<p class="gallery__slide-description">Проект для нескольких поколений: мастер-спальня с гардеробом и
+										санузлом, детская с мягким местом у окна,
+										кабинет-библиотека для дедушки, просторная кухня-гостиная с камином и большим столом.</p>
+								</div>
+							</a>
 						</li>
-						<li class="splide__slide gallery__item">
-							<img src="./img/mainpage/portfolio_2.webp" alt="Дизайн загородного дома 2"
-								class="gallery__img js-modal-image">
-							<div class="gallery__card-content">
-								<p class="gallery__slide-title title-s">Коттедж "Озерный"</p>
-								<p class="gallery__slide-description">Уютная спальня с видом на озеро, использование дерева и камня в
-									отделке.</p>
-							</div>
+						<li class="splide__slide">
+							<a href="/gallery/patricks-house.html" class="gallery__item">
+								<img src="/img/gallery/houses/patricks-house/1.webp" alt="Дом с парящей лестницей" class="gallery__img">
+								<div class="gallery__card-content">
+									<p class="gallery__slide-title title-s">Дом с парящей лестницей</p>
+									<p class="gallery__slide-description">Проект для нескольких поколений: мастер-спальня с гардеробом и
+										санузлом, детская с мягким местом у окна,
+										кабинет-библиотека для дедушки, просторная кухня-гостиная с камином и большим столом.</p>
+								</div>
+							</a>
 						</li>
-						<li class="splide__slide gallery__item">
-							<img src="./img/mainpage/portfolio_3.webp" alt="Дизайн загородного дома 3"
-								class="gallery__img js-modal-image">
-							<div class="gallery__card-content">
-								<p class="gallery__slide-title title-s">Вилла "Солнечная"</p>
-								<p class="gallery__slide-description">Современная кухня-столовая с выходом на террасу, светлые тона и
-									функциональность.</p>
-							</div>
+						<li class="splide__slide">
+							<a href="/gallery/zapovednik-1.html" class="gallery__item">
+								<img src="/img/gallery/houses/zapovednik-1/1.webp"
+									alt="Загородный дом в КП Заповедник — серый уют и командный вайб" class="gallery__img">
+								<div class="gallery__card-content">
+									<p class="gallery__slide-title title-s">Загородный дом в КП Заповедник — серый уют и командный вайб
+									</p>
+									<p class="gallery__slide-description">Проект для молодой семьи в КП Заповедник: натуральное дерево,
+										разные оттенки серого, качественный текстиль и акцентные
+										детали. Панно в гостиной и спальне стали центром внимания, а сам процесс работы сплотил команду и
+										подарил лёгкий,
+										дружный результат.</p>
+								</div>
+							</a>
+						</li>
+
+						<li class="splide__slide">
+							<a href="/gallery/parents-house.html" class="gallery__item">
+								<img src="/img/gallery/houses/parents-house/1.webp" alt="Дом-объятие для родителей"
+									class="gallery__img">
+								<div class="gallery__card-content">
+									<p class="gallery__slide-title title-s">Дом-объятие для родителей
+									</p>
+									<p class="gallery__slide-description">Тёплый проект, созданный дочерью для родителей: кухня с большим
+										круглым столом, терракотовые акценты, уютная гостиная с
+										картинами-одуванчиками, кабинет с жёлтым диваном и светлой живой библиотекой, спальни с гармоничной
+										атмосферой покоя и
+										силы. Дом стал символом заботы и любви.</p>
+								</div>
+							</a>
+						</li>
+						<li class="splide__slide">
+							<a href="/gallery/iset-brutal.html" class="gallery__item">
+								<img src="/img/gallery/houses/iset-brutal/1.webp" alt="Брутальный красавчик в Исеть Village"
+									class="gallery__img">
+								<div class="gallery__card-content">
+									<p class="gallery__slide-title title-s">Брутальный красавчик в Исеть Village
+									</p>
+									<p class="gallery__slide-description">Дом с характером: грубоватая эстетика дерева и металла, парные
+										контрасты зеркал и деталей, просторная кухня-гостиная с
+										камином и винницей, интимная мастер-спальня и яркая детская. Интерьер стал диалогом силы и уюта,
+										суровости и мягкости,
+										создавая гостеприимную крепость для семьи и друзей.</p>
+								</div>
+							</a>
+						</li>
+						<li class="splide__slide">
+							<a href="/gallery/shale-house.html" class="gallery__item">
+								<img src="/img/gallery/houses/shale-house/1.webp" alt="Шале — инвестиционный проект с эмоцией"
+									class="gallery__img">
+								<div class="gallery__card-content">
+									<p class="gallery__slide-title title-s">Шале — инвестиционный проект с эмоцией
+									</p>
+									<p class="gallery__slide-description">Интерьер, созданный для широкой аудитории, но с яркой
+										индивидуальностью. Кухонный остров стал центром общения и отдыха,
+										плетёные светильники и люстра из ракушек добавили тепла и лёгкости. Спальня — кокон для отдыха,
+										детская — баланс
+										серьёзности и игры, а гостевая — минимализм с акцентным панно.</p>
+								</div>
+							</a>
+						</li>
+
+						<li class="splide__slide">
+							<a href="/gallery/monteville.html" class="gallery__item">
+								<img src="/img/gallery/houses/monteville/27.webp"
+									alt="Демо-дом «Монтевиль» — смелые решения в КП «Зеленые кварталы»" class="gallery__img">
+								<div class="gallery__card-content">
+									<p class="gallery__slide-title title-s">Демо-дом «Монтевиль» — смелые решения в КП «Зеленые кварталы»
+									</p>
+									<p class="gallery__slide-description">Интерьер, созданный для демонстрации возможностей застройщика
+										«Метры». Пространство с нестандартной формой позволило
+										применить смелые дизайнерские приёмы: гостиная 3 в 1, спальня с выходом на террасу, мастер-санузел с
+										видом на лес, яркая
+										детская и кабинет для работы и отдыха.
+
+										html</p>
+								</div>
+							</a>
 						</li>
 					</ul>
 				</div>
@@ -137,72 +287,49 @@
 			<div class="splide gallery__slider">
 				<div class="splide__track">
 					<ul class="splide__list gallery__list">
-						<li class="splide__slide gallery__item">
-							<img src="./img/mainpage/portfolio_4.webp" alt="Современный интерьер 1"
-								class="gallery__img js-modal-image">
-							<div class="gallery__card-content">
-								<p class="gallery__slide-title title-s">Лофт "Урбан"</p>
-								<p class="gallery__slide-description">Интерьер в стиле лофт с кирпичными стенами и открытыми
-									коммуникациями.</p>
-							</div>
+						<li class="splide__slide">
+							<a href="/gallery/patricks-house.html" class="gallery__item">
+								<img src="/img/gallery/houses/patricks-house/5.webp" alt="Дом с парящей лестницей" class="gallery__img">
+								<div class="gallery__card-content">
+									<p class="gallery__slide-title title-s">Дом с парящей лестницей</p>
+									<p class="gallery__slide-description">Проект для нескольких поколений: мастер-спальня с гардеробом и
+										санузлом, детская с мягким местом у окна,
+										кабинет-библиотека для дедушки, просторная кухня-гостиная с камином и большим столом.</p>
+								</div>
+							</a>
 						</li>
-						<li class="splide__slide gallery__item">
-							<img src="./img/mainpage/portfolio_1.webp" alt="Современный интерьер 2"
-								class="gallery__img js-modal-image">
-							<div class="gallery__card-content">
-								<p class="gallery__slide-title title-s">Апартаменты "Сити"</p>
-								<p class="gallery__slide-description">Минимализм в деталях, скрытые системы хранения и акцентное
-									освещение.</p>
-							</div>
-						</li>
-						<li class="splide__slide gallery__item">
-							<img src="./img/mainpage/portfolio_2.webp" alt="Современный интерьер 3"
-								class="gallery__img js-modal-image">
-							<div class="gallery__card-content">
-								<p class="gallery__slide-title title-s">Студия "Модерн"</p>
-								<p class="gallery__slide-description">Функциональное зонирование пространства для комфортной жизни в
-									мегаполисе.</p>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
 
-		<!-- Проекты в современном стиле -->
-		<div class="gallery__section" id="modern-projects">
-			<h2 class="gallery__title title">Проекты в современном стиле</h2>
-			<div class="splide gallery__slider">
-				<div class="splide__track">
-					<ul class="splide__list gallery__list">
-						<li class="splide__slide gallery__item">
-							<img src="./img/mainpage/portfolio_3.webp" alt="Проект в современном стиле 1"
-								class="gallery__img js-modal-image">
-							<div class="gallery__card-content">
-								<p class="gallery__slide-title title-s">ЖК "Панорама"</p>
-								<p class="gallery__slide-description">Светлый интерьер с использованием стекла и металла, подчеркивающий
-									простор.</p>
-							</div>
+						<li class="splide__slide">
+							<a href="/gallery/monteville.html" class="gallery__item">
+								<img src="/img/gallery/houses/monteville/8.webp"
+									alt="Демо-дом «Монтевиль» — смелые решения в КП «Зеленые кварталы»" class="gallery__img">
+								<div class="gallery__card-content">
+									<p class="gallery__slide-title title-s">Демо-дом «Монтевиль» — смелые решения в КП «Зеленые кварталы»
+									</p>
+									<p class="gallery__slide-description">Интерьер, созданный для демонстрации возможностей застройщика
+										«Метры». Пространство с нестандартной формой позволило
+										применить смелые дизайнерские приёмы: гостиная 3 в 1, спальня с выходом на террасу, мастер-санузел с
+										видом на лес, яркая
+										детская и кабинет для работы и отдыха.
+
+										html</p>
+								</div>
+							</a>
 						</li>
-						<li class="splide__slide gallery__item">
-							<img src="./img/mainpage/portfolio_4.webp" alt="Проект в современном стиле 2"
-								class="gallery__img js-modal-image">
-							<div class="gallery__card-content">
-								<p class="gallery__slide-title title-s">Дом "Хайтек"</p>
-								<p class="gallery__slide-description">Интеграция умного дома и передовых технологий в дизайн интерьера.
-								</p>
-							</div>
+
+						<li class="splide__slide">
+							<a href="/gallery/my-home.html" class="gallery__item">
+								<img src="/img/gallery/houses/my-home/12.webp" alt="Мой дом" class="gallery__img">
+								<div class="gallery__card-content">
+									<p class="gallery__slide-title title-s">Мой дом — история дизайнерского пути</p>
+									<p class="gallery__slide-description">Личный проект, где типовой план превратился в уникальное
+										пространство: огромная спальня с камином, кухня-гостиная на
+										закат, авторские предметы интерьера и светлая прихожая. Дом стал отражением творческого поиска и
+										семейных перемен.</p>
+								</div>
+							</a>
 						</li>
-						<li class="splide__slide gallery__item">
-							<img src="./img/mainpage/portfolio_1.webp" alt="Проект в современном стиле 3"
-								class="gallery__img js-modal-image">
-							<div class="gallery__card-content">
-								<p class="gallery__slide-title title-s">Офис "Креатив"</p>
-								<p class="gallery__slide-description">Рабочее пространство, вдохновляющее на новые идеи и
-									продуктивность.
-								</p>
-							</div>
-						</li>
+
 					</ul>
 				</div>
 			</div>
@@ -214,74 +341,79 @@
 			<div class="splide gallery__slider">
 				<div class="splide__track">
 					<ul class="splide__list gallery__list">
-						<li class="splide__slide gallery__item">
-							<img src="./img/mainpage/portfolio_2.webp" alt="Проект в классическом стиле 1"
-								class="gallery__img js-modal-image">
-							<div class="gallery__card-content">
-								<p class="gallery__slide-title title-s">Усадьба "Дворянская"</p>
-								<p class="gallery__slide-description">Роскошный интерьер с лепниной, позолотой и антикварной мебелью.
-								</p>
-							</div>
+						<li class="splide__slide">
+							<a href="/gallery/zapovednik-1.html" class="gallery__item">
+								<img src="/img/gallery/houses/zapovednik-1/5.webp"
+									alt="Загородный дом в КП Заповедник — серый уют и командный вайб" class="gallery__img">
+								<div class="gallery__card-content">
+									<p class="gallery__slide-title title-s">Загородный дом в КП Заповедник — серый уют и командный вайб
+									</p>
+									<p class="gallery__slide-description">Проект для молодой семьи в КП Заповедник: натуральное дерево,
+										разные оттенки серого, качественный текстиль и акцентные
+										детали. Панно в гостиной и спальне стали центром внимания, а сам процесс работы сплотил команду и
+										подарил лёгкий,
+										дружный результат.</p>
+								</div>
+							</a>
 						</li>
-						<li class="splide__slide gallery__item">
-							<img src="./img/mainpage/portfolio_3.webp" alt="Проект в классическом стиле 2"
-								class="gallery__img js-modal-image">
-							<div class="gallery__card-content">
-								<p class="gallery__slide-title title-s">Квартира "Неоклассика"</p>
-								<p class="gallery__slide-description">Сочетание классических форм и современных материалов для
-									элегантного
-									вида.</p>
-							</div>
+
+						<li class="splide__slide">
+							<a href="/gallery/tanin-dom.html" class="gallery__item">
+								<img src="/img/gallery/houses/tanin-dom/3.webp" alt="Дизайн загородного дома 1" class="gallery__img">
+								<div class="gallery__card-content">
+									<p class="gallery__slide-title title-s">Танин дом — лёгкий интерьер</p>
+									<p class="gallery__slide-description">Загородный проект, где минимальные затраты превратились в
+										уникальные решения: кухня без верхних шкафов,
+										портьеры вместо
+										встроенного хранения, открытые полки в спальне и будуарная ванная с французским акцентом. Свет,
+										зеркала и
+										текстиль
+										сделали пространство свежим, уютным и вдохновляющим.</p>
+								</div>
+							</a>
 						</li>
-						<li class="splide__slide gallery__item">
-							<img src="./img/mainpage/portfolio_4.webp" alt="Проект в классическом стиле 3"
-								class="gallery__img js-modal-image">
-							<div class="gallery__card-content">
-								<p class="gallery__slide-title title-s">Резиденция "Империал"</p>
-								<p class="gallery__slide-description">Величественные залы, высокие потолки и изысканный декор.</p>
-							</div>
+
+						<li class="splide__slide">
+							<a href="/gallery/zapovednik-banya.html" class="gallery__item">
+								<img src="/img/gallery/houses/zapovednik-banya/12.webp" alt="Душевный банный комплекс в КП Заповедник"
+									class="gallery__img">
+								<div class="gallery__card-content">
+									<p class="gallery__slide-title title-s">Душевный банный комплекс в КП Заповедник
+									</p>
+									<p class="gallery__slide-description">Пространство, где дерево, камень и свет создают атмосферу
+										спокойствия. Раздевалка с медовой рейкой, стеллажами и
+										плетёным зеркалом задаёт тон отдыху, а комната отдыха со скальной стеной, реечным потолком и мягким
+										светом дарит
+										гармонию и ощущение единения с природой.</p>
+								</div>
+							</a>
 						</li>
+
 					</ul>
 				</div>
 			</div>
 		</div>
 
 		<!-- Проекты в стиле прованс -->
-		<div class="gallery__section" id="provence-projects">
+		<!-- <div class="gallery__section" id="provance-projects">
 			<h2 class="gallery__title title">Проекты в стиле прованс</h2>
 			<div class="splide gallery__slider">
 				<div class="splide__track">
 					<ul class="splide__list gallery__list">
-						<li class="splide__slide gallery__item">
-							<img src="./img/mainpage/portfolio_1.webp" alt="Проект в стиле прованс 1"
-								class="gallery__img js-modal-image">
-							<div class="gallery__card-content">
-								<p class="gallery__slide-title title-s">Домик "Лаванда"</p>
-								<p class="gallery__slide-description">Уютный интерьер с цветочными мотивами, пастельными тонами и
-									деревом.</p>
-							</div>
+						<li class="splide__slide">
+							<a href="" class="gallery__item">
+								<img src="./img/mainpage/portfolio_1.webp" alt="Проект в стиле прованс 1" class="gallery__img">
+								<div class="gallery__card-content">
+									<p class="gallery__slide-title title-s">Домик "Лаванда"</p>
+									<p class="gallery__slide-description">Уютный интерьер с цветочными мотивами, пастельными тонами и
+										деревом.</p>
+								</div>
+							</a>
 						</li>
-						<li class="splide__slide gallery__item">
-							<img src="./img/mainpage/portfolio_2.webp" alt="Проект в стиле прованс 2"
-								class="gallery__img js-modal-image">
-							<div class="gallery__card-content">
-								<p class="gallery__slide-title title-s">Кухня "Олива"</p>
-								<p class="gallery__slide-description">Атмосфера французской деревни с винтажной мебелью и теплым светом.
-								</p>
-							</div>
-						</li>
-						<li class="splide__slide gallery__item">
-							<img src="./img/mainpage/portfolio_3.webp" alt="Проект в стиле прованс 3"
-								class="gallery__img js-modal-image">
-							<div class="gallery__card-content">
-								<p class="gallery__slide-title title-s">Спальня "Романтика"</p>
-								<p class="gallery__slide-description">Легкий текстиль, кованые элементы и нежные оттенки для спокойного
-									сна.</p>
-							</div>
-						</li>
+
 					</ul>
 				</div>
 			</div>
-		</div>
+		</div> -->
 	</div>
 </section>

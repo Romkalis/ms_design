@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		const splideTrack = document.querySelector(".splide__tracker");
 		const slideArrows = document.querySelector(".splide__arrows");
 		// навешиваем класс перед инициализацией инстанса, анче стили перекрывают карточки
+		if (!splideElement || !listElement || !splideTrack || !slideArrows) return;
 
 		// Проверяем ширину экрана
 		if (window.innerWidth < 768) {
@@ -34,18 +35,18 @@ document.addEventListener("DOMContentLoaded", function () {
 			});
 
 			const bar = splideInstance.root.querySelector(".my-carousel-progress-bar");
-
 			const counter_start = document.querySelector(".slider__counter-start");
+			const counter_end = document.querySelector(".slider__counter-end");
 
 			// Обновляем ширину прогресс-бара при каждом движении карусели
 			splideInstance.on("mounted move", function () {
 				const end = splideInstance.Components.Controller.getEnd() + 1;
 				const rate = Math.min((splideInstance.index + 1) / end, 1);
-				bar.style.width = `${100 * rate}%`;
+				if (bar) bar.style.width = `${100 * rate}%`;
 
 				// Обновляем счетчик
-				counter_start.textContent = `${splideInstance.index + 1}`;
-				document.querySelector(".slider__counter-end").textContent = ` / ${end}`;
+				if (counter_start) counter_start.textContent = `${splideInstance.index + 1}`;
+				if (counter_end) counter_end.textContent = ` / ${end}`;
 			});
 
 			splideInstance.mount();
