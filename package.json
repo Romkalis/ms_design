@@ -1,6 +1,7 @@
 {
 	"scripts": {
-		"format": "prettier --write \"src/**/*.{html,css,scss,js,php}\""
+		"format": "prettier --write \"src/**/*.{html,css,scss,js,php}\"",
+		"optimize:build-img": "node optimize-build-images.js --dir build/img --max-side 1600 --max-kb 120"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.22.5",
@@ -35,6 +36,7 @@
 		"imagemin-webp": "^6.0.1",
 		"npm": "^9.9.3",
 		"prettier": "^3.8.1",
+		"sharp": "^0.34.3",
 		"sass": "^1.63.4",
 		"style-loader": "^3.3.3",
 		"webpack-stream": "^7.0.0"
