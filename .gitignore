@@ -1,3 +1,7 @@
 node_modules
 build
 .DS_Store
+src/img/tmp/
+build/img/tmp/
+*.zip
+*.psd
