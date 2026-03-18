@@ -56,6 +56,10 @@
   transition: transform 0.9s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
+.bw {
+  filter: saturate(0%);
+}
+
 .main__about-name {
   font-size: clamp(18px, 2.5vw, 28px);
 }

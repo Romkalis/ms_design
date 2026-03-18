@@ -5,3 +5,4 @@ src/img/tmp/
 build/img/tmp/
 *.zip
 *.psd
+src/files/.env

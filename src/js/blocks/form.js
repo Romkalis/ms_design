@@ -78,26 +78,27 @@ document.addEventListener("DOMContentLoaded", function () {
 		submitBtn.textContent = "Отправляется...";
 
 		const formData = new FormData(form);
-		const endpoint = form.getAttribute("action") || "/files/sendmail.php";
+		const endpoint = form.getAttribute("action") || "/files/mail.php";
 
 		fetch(endpoint, {
 			method: "POST",
 			body: formData,
 		})
-			.then((response) => {
-				if (response.ok) {
-					return response.text();
+			.then((response) => response.text().then((text) => ({ok: response.ok, status: response.status, text})))
+			.then(({ok, status, text}) => {
+				if (ok) {
+					statusDiv.textContent = "Мы скоро свяжемся с вами";
+					statusDiv.classList.add("success");
+					form.reset();
+				} else {
+					statusDiv.classList.add("error");
+					// Показываем текст от сервера (например "Mail send failed." или "Please complete the form.")
+					statusDiv.textContent = text && text.length < 200 ? text.trim() : "Произошла ошибка при отправке. Попробуйте позже.";
 				}
-				throw new Error("Network response was not ok.");
-			})
-			.then((data) => {
-				statusDiv.textContent = "Мы скоро свяжемся с вами";
-				statusDiv.classList.add("success");
-				form.reset();
 			})
 			.catch((error) => {
 				console.error("Error:", error);
-				statusDiv.textContent = "Произошла ошибка при отправке.";
+				statusDiv.textContent = "Произошла ошибка при отправке. Проверьте интернет и попробуйте снова.";
 				statusDiv.classList.add("error");
 			})
 			.finally(() => {
