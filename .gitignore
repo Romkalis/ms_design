@@ -1,5 +1,6 @@
 node_modules
 build
+docs
 .DS_Store
 src/img/tmp/
 build/img/tmp/

@@ -144,6 +144,10 @@ gulp.task("files:dev", function () {
 	return gulp.src("./src/files/**/*").pipe(changed("./build/files/")).pipe(gulp.dest("./build/files/"));
 });
 
+gulp.task("htaccess:dev", function () {
+	return gulp.src("./src/.htaccess").pipe(changed("./build/")).pipe(gulp.dest("./build/"));
+});
+
 gulp.task("js:dev", function () {
 	return (
 		gulp

@@ -213,6 +213,10 @@ gulp.task("files:docs", function () {
 	return gulp.src("./src/files/**/*").pipe(changed("./docs/files/")).pipe(gulp.dest("./docs/files/"));
 });
 
+gulp.task("htaccess:docs", function () {
+	return gulp.src("./src/.htaccess").pipe(changed("./docs/")).pipe(gulp.dest("./docs/"));
+});
+
 gulp.task("js:docs", function () {
 	return gulp
 		.src("./src/js/*.js")
