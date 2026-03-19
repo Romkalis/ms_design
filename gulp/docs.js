@@ -122,6 +122,9 @@ gulp.task("html:docs", function () {
 });
 
 gulp.task("sass:docs", function () {
+	if (!fs.existsSync("./docs/css/")) {
+		fs.mkdirSync("./docs/css/", {recursive: true});
+	}
 	return (
 		gulp
 			.src("./src/scss/*.scss")
@@ -215,6 +218,10 @@ gulp.task("files:docs", function () {
 
 gulp.task("htaccess:docs", function () {
 	return gulp.src("./src/.htaccess").pipe(changed("./docs/")).pipe(gulp.dest("./docs/"));
+});
+
+gulp.task("seo:docs", function () {
+	return gulp.src(["./src/robots.txt", "./src/sitemap.xml"], {allowEmpty: true}).pipe(changed("./docs/")).pipe(gulp.dest("./docs/"));
 });
 
 gulp.task("js:docs", function () {

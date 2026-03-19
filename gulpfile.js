@@ -10,7 +10,7 @@ gulp.task(
 	'default',
 	gulp.series(
 		'clean:dev', 'fontsDev',
-		gulp.parallel('html:dev', 'sass:dev', 'images:dev', 'svg:dev', 'files:dev', 'htaccess:dev', 'js:dev', 'favicon:dev', 'manifest:dev'),
+		gulp.parallel('html:dev', 'sass:dev', 'images:dev', 'svg:dev', 'files:dev', 'htaccess:dev', 'seo:dev', 'js:dev', 'favicon:dev', 'manifest:dev'),
 		gulp.parallel('server:dev', 'watch:dev')
 	)
 );
@@ -19,7 +19,7 @@ gulp.task(
 	'build',
 	gulp.series(
 		'clean:docs', 'fontsDocs',
-		gulp.parallel('html:docs', 'sass:docs', 'images:docs', 'files:docs', 'htaccess:docs', 'js:docs', 'svg:dev', 'favicon:docs', 'manifest:docs'),
+		gulp.parallel('html:docs', 'sass:docs', 'images:docs', 'files:docs', 'htaccess:docs', 'seo:docs', 'js:docs', 'svg:dev', 'favicon:docs', 'manifest:docs'),
 		gulp.parallel('server:docs')
 	)
 );

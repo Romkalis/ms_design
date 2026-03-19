@@ -35,6 +35,9 @@ gulp.task('otfToTtf', () => {
 });
 
 gulp.task('ttfToWoff', () => {
+	if (!fs.existsSync(`${destFolder}/fonts/`)) {
+		fs.mkdirSync(`${destFolder}/fonts/`, {recursive: true});
+	}
 	// Ищем файлы шрифтов .ttf
 	return (
 		gulp
@@ -69,6 +72,9 @@ gulp.task('fontsStyle', () => {
 	let fontsFile = `${srcFolder}/scss/base/_fontsAutoGen.scss`;
 	// Проверяем существуют ли файлы шрифтов
 	fs.readdir(`${destFolder}/fonts/`, function (err, fontsFiles) {
+		if (err) {
+			return;
+		}
 		if (fontsFiles) {
 			// Проверяем существует ли файл стилей для подключения шрифтов
 

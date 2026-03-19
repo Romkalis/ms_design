@@ -104,6 +104,9 @@ gulp.task("html:dev", function () {
 });
 
 gulp.task("sass:dev", function () {
+	if (!fs.existsSync("./build/css/")) {
+		fs.mkdirSync("./build/css/", {recursive: true});
+	}
 	return gulp
 		.src("./src/scss/**/*.scss")
 		.pipe(changed("./build/css/"))
@@ -146,6 +149,10 @@ gulp.task("files:dev", function () {
 
 gulp.task("htaccess:dev", function () {
 	return gulp.src("./src/.htaccess").pipe(changed("./build/")).pipe(gulp.dest("./build/"));
+});
+
+gulp.task("seo:dev", function () {
+	return gulp.src(["./src/robots.txt", "./src/sitemap.xml"], {allowEmpty: true}).pipe(changed("./build/")).pipe(gulp.dest("./build/"));
 });
 
 gulp.task("js:dev", function () {
@@ -191,6 +198,7 @@ gulp.task("watch:dev", function () {
 	gulp.watch(["./src/html/**/*.html", "./src/html/**/*.json"], gulp.parallel("html:dev"));
 	gulp.watch("./src/img/**/*", gulp.parallel("images:dev"));
 	gulp.watch("./src/files/**/*", gulp.parallel("files:dev"));
+	gulp.watch(["./src/robots.txt", "./src/sitemap.xml"], gulp.parallel("seo:dev"));
 	gulp.watch("./src/js/**/*.js", gulp.parallel("js:dev"));
 	gulp.watch("./src/img/svgicons/*", gulp.series("svg:dev"));
 });
