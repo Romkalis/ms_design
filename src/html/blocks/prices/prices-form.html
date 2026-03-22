@@ -1,5 +1,5 @@
 <section class="contacts__form prices__form-section" id="form">
-  <div class="contacts__form-wrapper">
+  <div class="contacts__form-wrapper container">
     <h2 class="title contacts__form-title visually-hidden">Ответим на все ваши вопросы</h2>
 
     <form action="/files/mail.php" method="POST" class="form prices__form" id="consultation-form">
@@ -22,6 +22,9 @@
         <label for="comment" class="form__label">Предпочтения по стилю интерьера</label>
         <textarea name="comment" id="comment" class="form__input form__textarea" placeholder="Комментарий"></textarea>
       </div>
+
+      <input type="text" name="company" class="visually-hidden" tabindex="-1" autocomplete="off">
+      <input type="hidden" name="form_ts" value="">
 
       <button type="submit" class="button btn-d form__button">Записаться</button>
       <div class="form__status"></div>
