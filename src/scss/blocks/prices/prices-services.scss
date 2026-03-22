@@ -1,0 +1,133 @@
+.prices__services {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.prices__services-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.prices__services-item {
+  background-color: var(--light-g);
+  padding: 50px 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 30px 0 30px 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: all 0.3s ease-in-out;
+
+  h3 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  span {
+    display: block;
+    width: 60px;
+    height: 60px;
+    // background-color: var(--accent);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  p {
+    font-size: clamp(16px, 2vw, 20px);
+  }
+
+}
+
+.prices__services-item:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+
+  .prices__link {
+    letter-spacing: 0.2em;
+  }
+}
+
+.prices__text-list {
+  display: grid;
+  gap: 1em;
+  margin-left: 1em;
+  font-size: clamp(14px, 2vw, 16px);
+
+  li {
+    list-style: disc;
+  }
+}
+
+.prices__link {
+  padding-top: 20px;
+  display: block;
+  margin-top: auto;
+  color: var(--acc);
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    letter-spacing: 0.3em;
+  }
+}
+
+.prices__services-item:first-child span {
+  background-image: url('/img/logos/service-icon-1.svg');
+}
+
+.prices__services-item:nth-child(2) span {
+  background-image: url('/img/logos/service-icon-2.svg');
+}
+
+.prices__services-item:nth-child(3) span {
+  background-image: url('/img/logos/service-icon-3.svg');
+}
+
+
+@media (max-width: 1200px) {
+  .prices__services-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .prices__services-item:nth-child(3) {
+    grid-column: 1 / -1;
+    max-width: 60%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .prices__services-list {
+    grid-template-columns: 1fr;
+  }
+
+  .prices__services-item {
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+
+  .prices__services-item:nth-child(3) {
+    max-width: 560px;
+  }
+}
+
+@media (max-width: 360px) {
+
+  .prices__services-item {
+    gap: 10px;
+
+    span {
+      width: 35px;
+      height: 35px;
+      flex-shrink: 0;
+    }
+  }
+
+}
