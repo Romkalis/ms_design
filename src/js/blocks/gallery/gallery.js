@@ -1,6 +1,26 @@
 import Splide from "@splidejs/splide";
 
 document.addEventListener("DOMContentLoaded", function () {
+	function debounce(fn, wait) {
+		let timeoutId = null;
+		return function (...args) {
+			if (timeoutId) window.clearTimeout(timeoutId);
+			timeoutId = window.setTimeout(() => fn.apply(this, args), wait);
+		};
+	}
+
+	function cleanupSplide(root) {
+		if (!root) return;
+		root.classList.remove("is-active", "is-initialized", "is-rendered");
+		root.querySelectorAll(".splide__track, .splide__list, .splide__slide").forEach((el) => {
+			el.removeAttribute("style");
+			el.removeAttribute("aria-hidden");
+			el.removeAttribute("tabindex");
+		});
+	}
+
+	const resizeHandlers = [];
+
 	// Находим все секции галереи
 	const gallerySections = document.querySelectorAll(".gallery__section");
 
@@ -24,17 +44,15 @@ document.addEventListener("DOMContentLoaded", function () {
 				}
 			} else {
 				if (splideInstance) {
-					splideInstance.destroy();
+					splideInstance.destroy(true);
 					splideInstance = null;
 				}
+				cleanupSplide(sliderElement);
 			}
 		}
 
 		// Инициализация при загрузке
-		initSplide();
-
-		// Проверка при изменении размера окна
-		window.addEventListener("resize", initSplide);
+		resizeHandlers.push(initSplide);
 	});
 
 	const worksSliders = document.querySelectorAll(".works__slider");
@@ -56,13 +74,21 @@ document.addEventListener("DOMContentLoaded", function () {
 				}
 			} else {
 				if (splideInstance) {
-					splideInstance.destroy();
+					splideInstance.destroy(true);
 					splideInstance = null;
 				}
+				cleanupSplide(sliderElement);
 			}
 		}
 
-		initSplide();
-		window.addEventListener("resize", initSplide);
+		resizeHandlers.push(initSplide);
 	});
+
+	resizeHandlers.forEach((fn) => fn());
+	window.addEventListener(
+		"resize",
+		debounce(() => {
+			resizeHandlers.forEach((fn) => fn());
+		}, 150)
+	);
 });

@@ -3,6 +3,14 @@ import Splide from "../../../node_modules/@splidejs/splide/";
 document.addEventListener("DOMContentLoaded", function () {
 	let splideInstance = null;
 
+	function debounce(fn, wait) {
+		let timeoutId = null;
+		return function (...args) {
+			if (timeoutId) window.clearTimeout(timeoutId);
+			timeoutId = window.setTimeout(() => fn.apply(this, args), wait);
+		};
+	}
+
 	function initializeSplide() {
 		const splideElement = document.querySelector(".advantages");
 		const listElement = document.querySelector(".advantages__list");
@@ -19,37 +27,31 @@ document.addEventListener("DOMContentLoaded", function () {
 			splideElement.classList.add("splide");
 			listElement.classList.add("splide__list");
 
-			splideInstance = new Splide(".advantages", {
-				type: "loop",
-				arrows: true,
-				pagination: false,
-				drag: true,
-				paginationKeyboard: true,
-				paginationDirection: true,
-				mediaQuery: "min",
-				breakpoints: {
-					768: {
-						destroy: true,
-					},
-				},
-			});
+			if (!splideInstance) {
+				splideInstance = new Splide(".advantages", {
+					type: "loop",
+					arrows: true,
+					pagination: false,
+					drag: true,
+					paginationKeyboard: true,
+					paginationDirection: true,
+				});
 
-			const bar = splideInstance.root.querySelector(".my-carousel-progress-bar");
-			const counter_start = document.querySelector(".slider__counter-start");
-			const counter_end = document.querySelector(".slider__counter-end");
+				const bar = splideInstance.root.querySelector(".my-carousel-progress-bar");
+				const counter_start = document.querySelector(".slider__counter-start");
+				const counter_end = document.querySelector(".slider__counter-end");
 
-			// Обновляем ширину прогресс-бара при каждом движении карусели
-			splideInstance.on("mounted move", function () {
-				const end = splideInstance.Components.Controller.getEnd() + 1;
-				const rate = Math.min((splideInstance.index + 1) / end, 1);
-				if (bar) bar.style.width = `${100 * rate}%`;
+				splideInstance.on("mounted move", function () {
+					const end = splideInstance.Components.Controller.getEnd() + 1;
+					const rate = Math.min((splideInstance.index + 1) / end, 1);
+					if (bar) bar.style.width = `${100 * rate}%`;
 
-				// Обновляем счетчик
-				if (counter_start) counter_start.textContent = `${splideInstance.index + 1}`;
-				if (counter_end) counter_end.textContent = ` / ${end}`;
-			});
+					if (counter_start) counter_start.textContent = `${splideInstance.index + 1}`;
+					if (counter_end) counter_end.textContent = ` / ${end}`;
+				});
 
-			splideInstance.mount();
+				splideInstance.mount();
+			}
 		} else {
 			// Удаляем классы и уничтожаем экземпляр Splide при ширине экрана >= 768px
 
@@ -69,5 +71,5 @@ document.addEventListener("DOMContentLoaded", function () {
 	initializeSplide();
 
 	// Добавляем слушатель события resize для повторной инициализации при изменении размера экрана
-	window.addEventListener("resize", initializeSplide);
+	window.addEventListener("resize", debounce(initializeSplide, 150));
 });
