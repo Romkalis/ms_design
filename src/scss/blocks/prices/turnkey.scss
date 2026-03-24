@@ -1,0 +1,40 @@
+.turnkey__bg {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.8) 100%), url('/img/gallery/prices/prices-top4.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.turnkey__price-pic {
+  background-image: url('/img/gallery/prices/turnkey-price.webp');
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  height: auto;
+}
+
+.turnkey-support {
+  padding: 90px 0;
+  background-color: var(--light-g);
+}
+
+.turnkey__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(20px, 4vw, 40px);
+}
+
+.turnkey__item {
+  padding: 90px 20px 20px 20px;
+  background-color: #fff;
+}
+
+.turnkey__sub-item {
+  margin-left: 1em;
+  list-style-type: circle;
+}
+
+@media (max-width: 768px) {
+  .turnkey__list {
+    grid-template-columns: 1fr;
+  }
+}

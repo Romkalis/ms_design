@@ -1,6 +1,6 @@
 .prices__services {
-  padding-top: 90px;
-  padding-bottom: 90px;
+  padding-top: clamp(40px, 5vw, 90px);
+  padding-bottom: clamp(40px, 5vw, 90px);
 }
 
 .prices__services-list {
@@ -10,15 +10,28 @@
 }
 
 .prices__services-item {
+  height: 100%;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.prices__services-link {
   background-color: var(--light-g);
+  color: var(--dark);
   padding: 50px 30px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16);
   border-radius: 5px;
-
+  height: 100%;
   display: flex;
   flex-direction: column;
   gap: 20px;
   transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: var(--dark);
+  }
 
   h3 {
     display: flex;

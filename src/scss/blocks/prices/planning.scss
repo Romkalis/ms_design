@@ -48,6 +48,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
+  border-radius: 10px;
 }
 
 .planning__info-list {
@@ -155,6 +156,7 @@
   padding-bottom: 80px;
   display: grid;
   grid-template-columns: 2fr 3fr;
+  align-items: center;
   gap: clamp(20px, 3vw, 40px);
 }
 
@@ -165,6 +167,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
+  border-radius: 10px;
 }
 
 .planning__price-info {

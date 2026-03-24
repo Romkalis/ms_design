@@ -10,7 +10,7 @@
 
 
 .prices__top {
-  padding: 120px 0;
+  padding: clamp(80px, 6vw, 120px) 0;
 
   color: var(--light);
   text-align: center;
@@ -27,7 +27,8 @@
 .prices-divider {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, 0.9) 100%);
   color: var(--light);
-  padding-bottom: 50px;
+  padding-top: clamp(20px, 3vw, 50px);
+  padding-bottom: clamp(50px, 5vw, 90px);
 
   .container {
     display: flex;
@@ -52,9 +53,9 @@
 }
 
 .prices__description {
-  font-size: clamp(20px, 2.5vw, 30px);
+  font-size: clamp(20px, 2.5vw, 26px);
   font-weight: 300;
-  margin: 20px auto;
+  margin: clamp(20px, 3vw, 40px) auto;
   max-width: 900px;
   text-align: center;
 }
