@@ -3,3 +3,4 @@ Allow: /
 Disallow: /files/
 
 Sitemap: https://xn----7sblghfj6a4ei.xn--p1ai/sitemap.xml
+Host: xn----7sblghfj6a4ei.xn--p1ai

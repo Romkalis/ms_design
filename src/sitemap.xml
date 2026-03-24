@@ -2,146 +2,170 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://xn----7sblghfj6a4ei.xn--p1ai/</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://xn----7sblghfj6a4ei.xn--p1ai/gallery</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://xn----7sblghfj6a4ei.xn--p1ai/prices</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xn----7sblghfj6a4ei.xn--p1ai/planning</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xn----7sblghfj6a4ei.xn--p1ai/project</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xn----7sblghfj6a4ei.xn--p1ai/turnkey</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://xn----7sblghfj6a4ei.xn--p1ai/contacts</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://xn----7sblghfj6a4ei.xn--p1ai/privacy-policy</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>
   <url>
     <loc>https://xn----7sblghfj6a4ei.xn--p1ai/cookie-policy</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>
 
   <url>
     <loc>https://xn----7sblghfj6a4ei.xn--p1ai/gallery/all-family-countryhouse</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://xn----7sblghfj6a4ei.xn--p1ai/gallery/flat-nagorny</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://xn----7sblghfj6a4ei.xn--p1ai/gallery/iset-brutal</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://xn----7sblghfj6a4ei.xn--p1ai/gallery/iset-villadj</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://xn----7sblghfj6a4ei.xn--p1ai/gallery/monteville</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://xn----7sblghfj6a4ei.xn--p1ai/gallery/my-home</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://xn----7sblghfj6a4ei.xn--p1ai/gallery/orange-mood</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://xn----7sblghfj6a4ei.xn--p1ai/gallery/parents-house</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://xn----7sblghfj6a4ei.xn--p1ai/gallery/patricks-house</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://xn----7sblghfj6a4ei.xn--p1ai/gallery/shale-house</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://xn----7sblghfj6a4ei.xn--p1ai/gallery/south-district-flat</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://xn----7sblghfj6a4ei.xn--p1ai/gallery/tanin-dom</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://xn----7sblghfj6a4ei.xn--p1ai/gallery/visualization-clever-park-flat</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://xn----7sblghfj6a4ei.xn--p1ai/gallery/visualization-green-disctricts</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://xn----7sblghfj6a4ei.xn--p1ai/gallery/visualization-house-orel</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://xn----7sblghfj6a4ei.xn--p1ai/gallery/visualization-south-disctricts</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://xn----7sblghfj6a4ei.xn--p1ai/gallery/visualization-tixvin</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://xn----7sblghfj6a4ei.xn--p1ai/gallery/zapovednik-1</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://xn----7sblghfj6a4ei.xn--p1ai/gallery/zapovednik-banya</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
