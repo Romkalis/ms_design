@@ -2,9 +2,31 @@ document.addEventListener("DOMContentLoaded", function () {
 	const forms = document.querySelectorAll('form#consultation-form, form[action="/files/mail.php"], form[action$="/files/mail.php"]');
 	if (!forms.length) return;
 
+	const MIN_SUBMIT_MS = 2500;
+	const RATE_LIMIT_MS = 2 * 60 * 1000;
+	const RATE_LIMIT_STORAGE_KEY = "msk_form_last_submit_at";
+
+	function getLastSubmitAt() {
+		try {
+			const raw = localStorage.getItem(RATE_LIMIT_STORAGE_KEY);
+			if (!raw) return 0;
+			const value = Number(raw);
+			return Number.isFinite(value) ? value : 0;
+		} catch (e) {
+			return 0;
+		}
+	}
+
+	function setLastSubmitAt(value) {
+		try {
+			localStorage.setItem(RATE_LIMIT_STORAGE_KEY, String(value));
+		} catch (e) {}
+	}
+
 	forms.forEach((form) => {
 		const nameInput = form.querySelector('input[name="name"]');
 		const phoneInput = form.querySelector('input[name="phone"]');
+		const copyEmailInput = form.querySelector('input[name="copyemail"]');
 		const submitBtn = form.querySelector('button[type="submit"]');
 		const statusDiv = form.querySelector(".form__status");
 		const tsInput = form.querySelector('input[name="form_ts"]');
@@ -42,6 +64,29 @@ document.addEventListener("DOMContentLoaded", function () {
 			statusDiv.className = "form__status";
 			statusDiv.classList.remove("success", "error");
 
+			if (copyEmailInput && copyEmailInput.value.trim() !== "") {
+				statusDiv.textContent = "Не удалось отправить. Попробуйте ещё раз.";
+				statusDiv.classList.add("error");
+				return;
+			}
+
+			const nowMs = Date.now();
+			const lastSubmitAt = getLastSubmitAt();
+			if (lastSubmitAt > 0 && nowMs - lastSubmitAt < RATE_LIMIT_MS) {
+				statusDiv.textContent = "Можно отправлять не чаще 1 раза в 2 минуты.";
+				statusDiv.classList.add("error");
+				return;
+			}
+
+			if (tsInput && tsInput.value) {
+				const startedAtMs = Number(tsInput.value);
+				if (Number.isFinite(startedAtMs) && nowMs - startedAtMs < MIN_SUBMIT_MS) {
+					statusDiv.textContent = "Не удалось отправить. Попробуйте ещё раз.";
+					statusDiv.classList.add("error");
+					return;
+				}
+			}
+
 			let isValid = true;
 
 			const nameValue = nameInput.value.trim();
@@ -76,6 +121,7 @@ document.addEventListener("DOMContentLoaded", function () {
 					if (ok) {
 						statusDiv.textContent = "Мы скоро свяжемся с вами";
 						statusDiv.classList.add("success");
+						setLastSubmitAt(Date.now());
 						form.reset();
 						if (tsInput) tsInput.value = String(Date.now());
 					} else {

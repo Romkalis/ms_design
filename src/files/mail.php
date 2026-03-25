@@ -41,9 +41,9 @@ if ($ip !== '') {
         $state = array_merge($state, $decoded);
       }
 
-      $windowSeconds = 60;
-      $maxPerWindow = 6;
-      $minIntervalSeconds = 10;
+      $windowSeconds = 120;
+      $maxPerWindow = 1;
+      $minIntervalSeconds = 120;
 
       $windowStart = (int)($state['windowStart'] ?? $now);
       $count = (int)($state['count'] ?? 0);
@@ -91,11 +91,16 @@ if ($honeypot !== '') {
   respond(200, 'OK');
 }
 
+$copyEmail = trim((string)($_POST['copyemail'] ?? ''));
+if ($copyEmail !== '') {
+  respond(200, 'OK');
+}
+
 $formTs = (string)($_POST['form_ts'] ?? '');
 if ($formTs !== '' && preg_match('/^\d{10,}$/', $formTs) === 1) {
   $tsMs = (int)$formTs;
   $ageSeconds = (int)floor((microtime(true) * 1000 - $tsMs) / 1000);
-  if ($ageSeconds < 3) {
+  if ($ageSeconds < 2) {
     respond(400, 'Не удалось отправить. Попробуйте ещё раз.');
   }
   if ($ageSeconds > 7200) {
