@@ -7,7 +7,7 @@
   background: linear-gradient(rgba(51, 36, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../../../img/mainpage/main_top.webp);
   background-position: center;
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: scroll;
   height: 80vh;
   border-radius: 2vw;
 
@@ -17,6 +17,12 @@
   align-items: center;
   gap: clamp(24px, 3vw, 36px);
   color: var(--light);
+}
+
+@media (min-width: 1024px) {
+  .main__top-wrapper {
+    background-attachment: fixed;
+  }
 }
 
 .title {}

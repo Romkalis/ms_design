@@ -25,7 +25,6 @@
   <noscript>
     <link rel="stylesheet" href="/css/main.css?v=1.0.1" />
   </noscript>
-  <link rel="preload" href="/img/mainpage/main_top.webp" as="image" fetchpriority="high" />
   <link rel="preload" href="/fonts/tilda-sans_regular.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="/fonts/tilda-sans_semibold.woff2" as="font" type="font/woff2" crossorigin />
 
@@ -40,13 +39,45 @@
 
 
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0RHHHNYSGF"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-0RHHHNYSGF');
+    (function () {
+      const GA_ID = "G-0RHHHNYSGF";
+      function hasConsent() {
+        try {
+          return localStorage.getItem("cookieConsent") === "true";
+        } catch (e) {
+          return false;
+        }
+      }
+      function load() {
+        if (window.__gtagLoaded) return;
+        window.__gtagLoaded = true;
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          window.dataLayer.push(arguments);
+        }
+        window.gtag = window.gtag || gtag;
+        window.gtag("js", new Date());
+        window.gtag("config", GA_ID);
+        const s = document.createElement("script");
+        s.async = true;
+        s.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(GA_ID);
+        document.head.appendChild(s);
+      }
+      if (hasConsent()) {
+        if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", load);
+        else load();
+        return;
+      }
+      document.addEventListener("click", function (e) {
+        const btn = e.target && e.target.closest ? e.target.closest("#cookieAccept") : null;
+        if (!btn) return;
+        setTimeout(load, 0);
+      });
+      window.addEventListener("load", function () {
+        if (hasConsent()) load();
+      });
+    })();
   </script>
 </head>
 
