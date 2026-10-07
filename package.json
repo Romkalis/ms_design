@@ -1,5 +1,7 @@
 {
 	"scripts": {
+		"dev": "gulp",
+		"build": "gulp build",
 		"format": "prettier --write \"src/**/*.{html,css,scss,js,php}\"",
 		"optimize:build-img": "node optimize-build-images.js --dir build/img --max-side 1600 --max-kb 120"
 	},
