@@ -5,6 +5,7 @@ require('./gulp/dev.js');
 require('./gulp/docs.js');
 require('./gulp/fontsDev.js');
 require('./gulp/fontsDocs.js');
+require('./gulp/wp.js');
 
 gulp.task(
 	'default',
@@ -21,5 +22,18 @@ gulp.task(
 		'clean:docs', 'fontsDocs',
 		gulp.parallel('html:docs', 'sass:docs', 'images:docs', 'files:docs', 'htaccess:docs', 'seo:docs', 'js:docs', 'svg:dev', 'favicon:docs', 'manifest:docs'),
 		gulp.parallel('server:docs')
+	)
+);
+
+// Статика + тема WordPress для галереи. Сервер не запускается: галерею без WordPress не посмотреть
+gulp.task(
+	'build:wp',
+	gulp.series(
+		function setWpTarget(done) {
+			process.env.BUILD_TARGET = 'wp';
+			done();
+		},
+		'clean:docs', 'fontsDocs',
+		gulp.parallel('html:docs', 'sass:docs', 'images:docs', 'files:docs', 'htaccess:wp', 'seo:docs', 'js:docs', 'svg:dev', 'favicon:docs', 'manifest:docs', 'theme:docs')
 	)
 );

@@ -77,6 +77,10 @@ gulp.task("clean:docs", function (done) {
 	done();
 });
 
+// В сборке для WordPress галерею отдаёт тема, статические страницы галереи не нужны
+const isWpBuild = () => process.env.BUILD_TARGET === "wp";
+const wpGalleryExcludes = ["!./src/html/gallery.html", "!./src/html/gallery/**"];
+
 const fileIncludeSetting = {
 	prefix: "@@",
 	basepath: "@file",
@@ -96,7 +100,7 @@ gulp.task("html:docs", function () {
 	return (
 		gulp
 			// .src(['./src/html/**/*.html', '!./src/html/blocks/*.html'])
-			.src(["./src/html/**/*.html", "!./**/blocks/**/*.*", "!./src/html/docs/**/*.*"])
+			.src(["./src/html/**/*.html", "!./**/blocks/**/*.*", "!./src/html/docs/**/*.*", ...(isWpBuild() ? wpGalleryExcludes : [])])
 			.pipe(changed("./docs/"))
 			.pipe(plumber(plumberNotify("HTML")))
 			.pipe(fileInclude(fileIncludeSetting))
